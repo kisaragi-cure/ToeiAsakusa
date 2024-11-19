@@ -32,17 +32,11 @@ background-color: #ffffff;
     width: 155px;
 }
 
-.sotetsubutton{
-    width: 150px;
+.keiseibutton{
+    width: 250px;
     height: 2em;
     padding: 7px;
-    font-size: 18pt;
-}
-.dentobutton{
-    width: 200px;
-    height: 2em;
-    padding: 7px;
-    font-size: 18pt;
+    font-size: 14pt;
 }
 
 
@@ -55,7 +49,7 @@ background-color: #ffffff;
 <font face="BIZ UDゴシック,メイリオ,ＭＳ ゴシック">
 
 <nobr>
-<p> 都営浅草線～京急線　　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.00 </p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.01 11/19</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:9pt"><p>本アプリケーションが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。公共交通事業者により提供されたデータを元にしていますが、</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:9pt"><p>必ずしも正確・完全なものとは限りません。本アプリケーションの表示内容について、公共交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -65,7 +59,7 @@ background-color: #ffffff;
 <br>
 <br>
 <br>
-<div id="time" style="position: absolute; top: 8px; left:350px; font-size:12pt; "></div>
+<div id="time" style="position: absolute; top: 8px; left:330px; font-size:12pt; "></div>
 
 <div style="position: absolute; top: 220px; left:290px;  color:#ff69b4; font-size:14pt"><p>●</p></div> <!快速>
 <div style="position: absolute; top: 220px; left:310px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!通特>
@@ -77,7 +71,9 @@ background-color: #ffffff;
 
 
 <div style="position: absolute; top: 200px; left:720px; font-size:12pt"><p>(押上駅について)</p></div>
-<div style="position: absolute; top: 222px; left:720px; font-size:10pt"><p>駅構内は表示しません。</p></div>
+<div style="position: absolute; top: 222px; left:720px; font-size:11pt"><p>押上駅はこちらで確認できます↓</p></div>
+
+<div style="position: absolute; top: 260px; left:700px; font-size:24pt"><input type="button" id = "keisei" value="京成押上線列車走行位置" class="keiseibutton"></div>
 
 <!押上-本所>
 <div id="a20-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a20-19" disabled / name="address" size="14" value=""　></div>
@@ -651,6 +647,10 @@ background-color: #ffffff;
 
 /////////////////////////////////////ここから都営
 
+document.getElementById("keisei").addEventListener("click", function () {
+  location.href ="https://zaisen.tid-keisei.jp/html/zaisen.html?line=4";
+}, false);
+
 var request2 = new XMLHttpRequest();
 request2.open("GET", "https://api.odpt.org/api/v4/odpt:Train?odpt:railway=odpt.Railway:Toei.Asakusa&acl:consumerKey=qkpjriztbhvaxwjzum1oluug1hnfvwfq3ztxnsb56xtbt6qve7zdwv8bb73ajavy", true);
 request2.responseType = "text";
@@ -857,7 +857,28 @@ case '"odpt.Operator:Keikyu"':
 }
 
 //所属不一致判定
-
+switch ( unban.substr ( -1,1) ) {
+case 'T' :
+	if ( sha != "　(T)") {
+	dai = 1;
+	}
+	break;
+case 'H' :
+	if ( sha != "　(H)") {
+	dai = 1;
+	}
+	break;
+case 'N' :
+	if ( sha != "　(N)") {
+	dai = 1;
+	}
+	break;
+case 'K' :
+	if ( sha != "　(K)") {
+	dai = 1;
+	}
+	break;
+}
 
 //運番設定
 
@@ -2084,6 +2105,10 @@ case '"odpt.TrainType:Keikyu.AccessExpress"':
 case '"odpt.TrainType:Keikyu.AirportRapidLimitedExpress"':
 	kind = "エ";
 	break;
+case '"odpt.TrainType:Keikyu.MorningWing"':
+case '"odpt.TrainType:Keikyu.EveningWing"':
+	kind = "Ｗ";
+	break;
 case '"回"':
 	kind = "回";
 	break;
@@ -2252,10 +2277,17 @@ case ('"odpt.Station:Keikyu.Main.Shinagawa"'):
 	switch ( scid) {
 	case ( 'null' ):
 	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if (( kind != '普' && kind != 'Ｗ' ) || des == '品' ){
 		nameText = document.getElementById('kk01-1a');
 		target = document.getElementById('kk01-1ad');
 		doc2= document.getElementById("kk01-1"); 
-		doc0= document.getElementById("kk01-1b");  		
+		doc0= document.getElementById("kk01-1b"); 
+		} else {
+		nameText = document.getElementById('kk01-3a');
+		target = document.getElementById('kk01-3ad');
+		doc2= document.getElementById("kk01-3"); 
+		doc0= document.getElementById("kk01-3b"); 
+		} 
 	} else {
 		nameText = document.getElementById('kk01-2a');
 		target = document.getElementById('kk01-2ad');
@@ -2607,6 +2639,7 @@ case '特' :
 doc2.style.color = '#ff0000'; //文字
 break;
 case '快' :
+case 'Ｗ' :
 doc2.style.color = '#32cd32'; //文字
 break;
 case 'ア' :

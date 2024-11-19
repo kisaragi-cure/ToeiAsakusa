@@ -340,6 +340,7 @@ background-color: #ffffff;
 <div style="position: absolute; top: 3310px; left:350px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
 <div style="position: absolute; top: 3310px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
 <div style="position: absolute; top: 3330px; left:315px; font-size:18pt"><p>泉岳寺</p></div>
+<div style="position: absolute; top: 3365px; left:235px; font-size:10pt"><p>※一部実番線と異なります</p></div>
 <div id="a07-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-1a" disabled / name="address" size="14" value=""　></div>
 <div id="a07-1b" style="position: absolute; top: 3330px; left:625px; font-size:13pt; "></div>
 <div id="a07-1" style="position: absolute; top: 3330px; left:632px; font-size:13pt; "></div>
@@ -486,13 +487,13 @@ background-color: #ffffff;
 
 <!泉岳寺-品川>
 <div id="a07-kkd" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-kk" disabled / name="address" size="14" value=""　></div>
-<div id="a07-kkb" style="position: absolute; top: 3610px; left:800px; font-size:13pt; "></div>
-<div id="a07-kke" style="position: absolute; top: 3610px; left:807px; font-size:13pt; "></div>
-<div id="a07-kkc" style="position: absolute; top: 3665px; left:800px; font-size:13pt; color:#FF0000; "></div>
+<div id="a07-kkb" style="position: absolute; top: 3605px; left:800px; font-size:13pt; "></div>
+<div id="a07-kke" style="position: absolute; top: 3605px; left:807px; font-size:13pt; "></div>
+<div id="a07-kkc" style="position: absolute; top: 3660px; left:800px; font-size:13pt; color:#FF0000; "></div>
 <div id="kk-a07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk-a07" disabled / name="address" size="14" value=""　></div>
-<div id="kk-a07b" style="position: absolute; top: 3610px; left:660px; font-size:13pt; "></div>
-<div id="kk-a07e" style="position: absolute; top: 3610px; left:667px; font-size:13pt; "></div>
-<div id="kk-a07c" style="position: absolute; top: 3665px; left:660px; font-size:13pt; color:#FF0000; "></div>
+<div id="kk-a07b" style="position: absolute; top: 3605px; left:660px; font-size:13pt; "></div>
+<div id="kk-a07e" style="position: absolute; top: 3605px; left:667px; font-size:13pt; "></div>
+<div id="kk-a07c" style="position: absolute; top: 3660px; left:660px; font-size:13pt; color:#FF0000; "></div>
 
 <div style="position: absolute; top: 3720px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
 <div style="position: absolute; top: 3720px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
@@ -626,6 +627,7 @@ background-color: #ffffff;
 <div style="position: absolute; top: 5350px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
 <div style="position: absolute; top: 5350px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
 <div style="position: absolute; top: 5370px; left:520px; font-size:18pt"><p>平和島</p></div>
+<div style="position: absolute; top: 5405px; left:450px; font-size:10pt"><p>※一部実番線と異なります</p></div>
 <div id="kk08-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-1a" disabled / name="address" size="14" value=""　></div>
 <div id="kk08-1b" style="position: absolute; top: 5370px; left:840px; font-size:13pt; "></div>
 <div id="kk08-1" style="position: absolute; top: 5370px; left:847px; font-size:13pt; "></div>
@@ -687,13 +689,16 @@ let nowtime = Math.floor(Date.now() / 60000) ;
 
 	let nameText = document.getElementById('ty01-3a');
 
-if ( nowtime - sessionStorage.getItem("sstime")  > 4 ){
+if ( nowtime - sessionStorage.getItem("sktime")  > 4 ){
 	sessionStorage.setItem("sengakuji1a",'');
 	sessionStorage.setItem("sengakuji1b",'');
 	sessionStorage.setItem("sengakuji1c",'');
 	sessionStorage.setItem("sengakuji2a",'');
 	sessionStorage.setItem("sengakuji2b",'');
 	sessionStorage.setItem("sengakuji2c",'');
+}
+
+if ( nowtime - sessionStorage.getItem("kstime")  > 4 ){
 	sessionStorage.setItem("shinagawa1a",'');
 	sessionStorage.setItem("shinagawa1b",'');
 	sessionStorage.setItem("shinagawa1c",'');
@@ -1458,10 +1463,12 @@ if ( des == '西' ){
 		doc2= document.getElementById("a07-1"); 
 		doc0= document.getElementById("a07-1b");  
 		doc1= document.getElementById("a07-1c"); 
+	if ( des != '泉' ){
 		sengakuji = unban ; 
 		sengakujia = kind ; 
 		sengakujib = info ; 
-		sessionStorage.setItem('sstime', nowtime);
+		sessionStorage.setItem('sktime', nowtime);
+	}
 }
 	}
 	break ;
@@ -2258,7 +2265,7 @@ case ('"odpt.Station:Keikyu.Main.Shinagawa"'):
 		shinagawa = unban ; 
 		shinagawaa = newkind[unban1.replace('SH','H')] ; 
 		shinagawab = info ; 
-		sessionStorage.setItem('sstime', nowtime);
+		sessionStorage.setItem('kstime', nowtime);
 		}
 	}
 	break ;
@@ -2647,6 +2654,7 @@ if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
 	doc2.style.backgroundColor = '#ffffff'; //背景
 	switch (sessionStorage.getItem("shinagawa1b")) {
 	case '急' :
+	case '通' :
 	doc2.style.color = '#0000ff'; //文字
 	break;
 	case '特' :
@@ -2656,7 +2664,11 @@ if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
 	doc2.style.color = '#32cd32'; //文字
 	break;
 	case 'エ' :
+	case 'ア' :
 	doc2.style.color = '#ff8c00'; //文字
+	break;
+	case '速' :
+	doc2.style.color = '#ff69b4'; //文字
 	break;
 	}
 
@@ -2679,6 +2691,7 @@ if ( sessionStorage.getItem("shinagawa2a") != '' && sessionStorage.getItem("shin
 	doc2.style.backgroundColor = '#ffffff'; //背景
 	switch (sessionStorage.getItem("shinagawa2b")) {
 	case '急' :
+	case '通' :
 	doc2.style.color = '#0000ff'; //文字
 	break;
 	case '特' :
@@ -2688,7 +2701,11 @@ if ( sessionStorage.getItem("shinagawa2a") != '' && sessionStorage.getItem("shin
 	doc2.style.color = '#32cd32'; //文字
 	break;
 	case 'エ' :
+	case 'ア' :
 	doc2.style.color = '#ff8c00'; //文字
+	break;
+	case '速' :
+	doc2.style.color = '#ff69b4'; //文字
 	break;
 	}
 }
@@ -2701,12 +2718,28 @@ if ( sessionStorage.getItem("shinagawa2a") != '' && sessionStorage.getItem("shin
 };
 request3.send(null);
 
+function sleepSetInterval(ms, callback, count) {
+  let i = 0;
+  const interval = setInterval(() => {
+    callback();
+    i++;
+    if (i === count) {
+      clearInterval(interval);
+    }
+  }, ms);
+}
+
+var YY = sessionStorage.getItem('Y0');
+window.scrollTo(0, YY );
+
+sleepSetInterval(2000, () =>{
+      sessionStorage.setItem('Y0',window.pageYOffset) ;
+}
+, 7)
 
     }
   }
 };
-
-
 
 request2.send(null);
 

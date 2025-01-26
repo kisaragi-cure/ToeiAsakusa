@@ -490,7 +490,7 @@ background-color: #ffffff;
 <div id="a01dep25" style="position: absolute; top: 5120px; left:390px; color:#ffff00; font-size:12pt; "></div>
 
 <div style="position: absolute; top: 5150px; left:160px; color:#ff0000;  font-size:11pt"><p>※時刻表に掲載の番線で表示しています。</p></div>
-
+<div style="position: absolute; top: 5170px; left:160px; color:#ff0000;  font-size:11pt"><p>※出庫列車はホーム到着で順序割込します。</p></div>
 
 
 
@@ -905,9 +905,12 @@ let nowtime = Math.floor(Date.now() / 60000) ;
       let len = '';
       let len3 = '';
       let kind = '';
+      let kind0 = '';
       let unban = '';
       let unban1 = '';
+      let unban2 = '';
       let des = '';
+      let des0 = '';
       let stid = '';
       let scid = '';
       let trid = '';
@@ -1021,6 +1024,8 @@ now = now.getHours();
 	p = m;
 	var dest = {};
 	var newkind = {};
+	var kindn = {};
+	var desn = {};
 if ( day > 0 && day < 6 ) {
       var data4= JSON.parse(JSON.stringify(data3[1].odptstationTimetableObject)); 
 } else {
@@ -1035,9 +1040,13 @@ for ( m = m; m < len3; m++) {
 	var dest1 = JSON.stringify(data4[m].odpttrainNumber); 
 	var dest2 = JSON.stringify(data4[m].odptplatformNumber); 
 	var dest3 = JSON.stringify(data4[m].odptdepartureTime); 
+	var dest4 = JSON.stringify(data4[m].odptdestinationStation); 
+	var dest5 = JSON.stringify(data4[m].odpttrainType); 
 
 	dest[dest1] = dest2;
 	newkind[dest1] = dest3;
+	kindn[dest1] = dest5;
+	desn[dest1] = dest4;
 }
 
 
@@ -1052,6 +1061,7 @@ if (JSON.stringify(data[n].odptrailway) == '"odpt.Railway:Toei.Asakusa"'){
 
 //種別設定
      kind= JSON.stringify(data[n].odpttrainType); 
+     kind0 = JSON.stringify(data[n].odpttrainType).replaceAll('"','') ;
 	switch (kind) {
 case '"odpt.TrainType:Toei.Local"':
 	kind = "普";
@@ -1084,6 +1094,7 @@ case 'null':
 
 //行先設定
       des= JSON.stringify(data[n].odptdestinationStation) ;
+      des0= JSON.stringify(data[n].odptdestinationStation).replaceAll('"','') ;
 	switch (des) {
 case '["odpt.Station:Keisei.Main.KeiseiTakasago"]':
 	des = "高";
@@ -1263,6 +1274,45 @@ if ( delay == "0"){
 	var doc0= document.getElementById("ty99");  
 	var doc1= document.getElementById("ty99");
 	var doc2= document.getElementById("ty99");
+
+if (dest[unban1] == undefined ) {
+var unban2a = (unban1.substr( 1,2 )) - (-1) ;
+var unban2b = (unban1.substr( 3,2 )) - (-1);
+var unban2c = (unban1.substr( 5,1 ));
+if (unban1.substr( 1,1 ) > 3) {
+unban2a = (unban1.substr( 1,1 )) - (-1) ;
+unban2b = (unban1.substr( 2,2 )) - (-1);
+unban2c = (unban1.substr( 4,1 ));
+}
+unban2 = '"' + unban2a + unban2b + unban2c +  '"';
+
+if (dest[unban2] == undefined ) {
+unban2a = (unban2.substr( 1,2 )) - (-1) ;
+unban2b = (unban2.substr( 3,2 ));
+unban2c = (unban2.substr( 5,1 ));
+unban2 = '"' + unban2a + unban2b + unban2c +  '"';
+}
+
+if (dest[unban2] == undefined ) {
+unban2a = (unban2.substr( 1,2 )) - (-1) ;
+unban2b = (unban2.substr( 3,2 ));
+unban2c = (unban2.substr( 5,1 ));
+unban2 = '"' + unban2a + unban2b + unban2c +  '"';
+}
+if (dest[unban2] == undefined ) {
+unban2 = '"' + unban2a + unban2b + unban2c +  'a"';
+}
+
+if (dest[unban2] == undefined ) {
+unban2a = (unban1.substr( 1,2 )) - (-1) ;
+unban2b = (unban1.substr( 3,2 )) - (-1);
+unban2c = (unban1.substr( 5,1 ));
+unban2 = '"' + unban2a + unban2b + unban2c +  'b"';
+}
+
+} else {
+unban2 = unban1;
+}
 
 
 	let now = Math.floor(Date.now() / 60000) ;
@@ -1965,6 +2015,28 @@ case ('"odpt.Station:Toei.Asakusa.Togoshi"'):
 		doc2= document.getElementById("a04-03e"); 
 		doc0= document.getElementById("a04-03b");  
 		doc1= document.getElementById("a04-03c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	} 
 	break ;
 
 
@@ -1990,7 +2062,29 @@ case ('"odpt.Station:Toei.Asakusa.Nakanobu"'):
 		target = document.getElementById('a03-1ad');
 		doc2= document.getElementById("a03-1"); 
 		doc0= document.getElementById("a03-1b");  
-		doc1= document.getElementById("a03-1c");  
+		doc1= document.getElementById("a03-1c");   
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
 	}
 	break ;
 
@@ -2008,6 +2102,28 @@ case ('"odpt.Station:Toei.Asakusa.Nakanobu"'):
 		doc2= document.getElementById("a03-02e"); 
 		doc0= document.getElementById("a03-02b");  
 		doc1= document.getElementById("a03-02c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
 	break ;
 
 	default:
@@ -2032,6 +2148,28 @@ case ('"odpt.Station:Toei.Asakusa.Magome"'):
 		doc2= document.getElementById("a02-1"); 
 		doc0= document.getElementById("a02-1b");  
 		doc1= document.getElementById("a02-1c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
 	}
 	break ;
 
@@ -2048,7 +2186,30 @@ case ('"odpt.Station:Toei.Asakusa.Magome"'):
 		target = document.getElementById('a02-01d');
 		doc2= document.getElementById("a02-01e"); 
 		doc0= document.getElementById("a02-01b");  
-		doc1= document.getElementById("a02-01c");  
+		doc1= document.getElementById("a02-01c"); 
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
+ 
 	break ;
 
 	default:
@@ -2063,7 +2224,7 @@ case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
 	switch ( scid) {
 	case ( 'null' ):
 	
-	switch ( dest[unban1] ) {
+	switch ( dest[unban2] ) {
 	case ( '"1"' ):
 		nameText = document.getElementById('a01-1a');
 		target = document.getElementById('a01-1ad');
@@ -2071,24 +2232,34 @@ case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
 		doc0= document.getElementById("a01-1b");  
 		doc1= document.getElementById("a01-1c"); 
  
-	if ( kind1 == '' || dep1 > newkind[unban1].replaceAll('"','')){
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
 		kind2 = kind1 ;
 		des2 = des1 ;
 		dep2 = dep1 ;
 		num2 = num1 ;
 		ptf2 = ptf1 ;
 
-		kind1 = kind ;
-		des1 = des ;
-		dep1 = newkind[unban1].replaceAll('"','');
-		num1 = unban1.replaceAll('"','');
-		ptf1 = dest[unban1].replaceAll('"','');
-	} else {
-		kind2 = kind ;
-		des2 = des ;
-		dep2 = newkind[unban1].replaceAll('"','');
-		num2 = unban1.replaceAll('"','');
-		ptf2 = dest[unban1].replaceAll('"','');
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	if ( trid != '"odpt.RailDirection:Northbound"' ) {
+		des1 = des0;
+		kind1 = kind0;
+	}
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des2 = des0;
+		kind2 = kind0;
+	}
+	}
 	}
 
 	break ;
@@ -2099,27 +2270,37 @@ case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
 		doc0= document.getElementById("a01-2b");  
 		doc1= document.getElementById("a01-2c");  
 
-	if ( kind1 == '' || dep1 > newkind[unban1].replaceAll('"','')){
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
 		kind2 = kind1 ;
 		des2 = des1 ;
 		dep2 = dep1 ;
 		num2 = num1 ;
 		ptf2 = ptf1 ;
 
-		kind1 = kind ;
-		des1 = des ;
-		dep1 = newkind[unban1].replaceAll('"','');
-		num1 = unban1.replaceAll('"','');
-		ptf1 = dest[unban1].replaceAll('"','');
-	} else {
-		kind2 = kind ;
-		des2 = des ;
-		dep2 = newkind[unban1].replaceAll('"','');
-		num2 = unban1.replaceAll('"','');
-		ptf2 = dest[unban1].replaceAll('"','');
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	if ( trid != '"odpt.RailDirection:Northbound"' ) {
+		des1 = des0;
+		kind1 = kind0;
 	}
-	break ;
+	} else if ( kind2 == ''  ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des2 = des0;
+		kind2 = kind0;
+	}
+	}
+	}
 
+	break ;
 	default:
 		nameText = document.getElementById('a01-1a');
 			if ( nameText.value == "" ){
@@ -2283,6 +2464,7 @@ if ( sessionStorage.getItem("sengakuji2a") != '' && sessionStorage.getItem("seng
 	}
 }
 
+
 	//西馬込発車案内ここから
 if (kind1 != ""){
 	if (ptf1 == "1") {
@@ -2291,60 +2473,79 @@ if (kind1 != ""){
 	ptf1 = "←2番";
 	}
 	switch (kind1) {
-	case '普' :
+	case 'odpt.TrainType:Toei.Local' :
 	kind1 = "普通";
 	break;
-	case '速' :
+	case 'odpt.TrainType:Toei.Rapid' :
 	kind1 = "快速";
 	document.getElementById("a01dep11").style.backgroundColor = '#ff2b8a'
 	break;
-	case '特' :
+	case 'odpt.TrainType:Toei.LimitedExpress' :
 	kind1 = "特急";
 	document.getElementById("a01dep11").style.backgroundColor = '#ff0000'
 	break;
-	case '快' :
+	case 'odpt.TrainType:Toei.RapidLimitedExpress' :
 	kind1 = "快特";
 	document.getElementById("a01dep11").style.backgroundColor = '#00ff00'
 	break;
-	case '通' :
+	case 'odpt.TrainType:Toei.CommuterLimitedExpress' :
 	kind1 = "通特";
 	document.getElementById("a01dep11").style.backgroundColor = '#0000ff'
 	break;
-	case 'ア' :
+	case 'odpt.TrainType:Toei.AccessExpress' :
 	kind1 = "ア特";
 	document.getElementById("a01dep11").style.backgroundColor = '#ff3e00'
 	break;
 	}
 	switch (des1) {
-	case '泉' :
-	des1 = "泉岳寺";
-	break;
-	case '押' :
-	des1 = "押　上";
-	break;
-	case '青' :
-	des1 = "青　砥";
-	break;
-	case '高' :
+	case '[odpt.Station:Keisei.Main.KeiseiTakasago]':
 	des1 = "京成高砂";
 	break;
-	case '牧' :
-	des1 = "印西牧原";
+	case '[odpt.Station:Toei.Asakusa.Sengakuji]':
+	des1 = "泉岳寺";
 	break;
-	case '医' :
-	des1 = "印旛医大";
+	case '[odpt.Station:Toei.Asakusa.Magome]':
+	des1 = "馬　込";
 	break;
-	case '佐' :
+	case '[odpt.Station:Toei.Asakusa.Gotanda]':
+	des1 = "五反田";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Shimbashi]':
+	des1 = "新　橋";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Ningyocho]':
+	des1 = "人形町";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Asakusabashi]':
+	des1 = "浅草橋";
+	break;
+	case '[odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1]':
+	case '[odpt.Station:Keisei.Main.NaritaAirportTerminal1]':
+	des1 = "成田空港";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiSakura]':
 	des1 = "京成佐倉";
 	break;
-	case '成' :
+	case '[odpt.Station:Hokuso.Hokuso.ImbaNihonIdai]':
+	des1 = "印旛日医";
+	break;
+	case '[odpt.Station:Keisei.Oshiage.Aoto]':
+	des1 = "青　砥";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.InzaiMakinohara]':
+	des1 = "印西牧原";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Oshiage]':
+	des1 = "押　上";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiNarita]':
 	des1 = "京成成田";
 	break;
-	case '芝' :
-	des1 = "芝山千代";
+	case '[odpt.Station:Keisei.Main.Sogosando]':
+	des1 = "宗吾参道";
 	break;
-	case '空' :
-	des1 = "成田空港";
+	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
+	des1 = "芝山千代";
 	break;
 	default:
 	des1 = "―";
@@ -2359,60 +2560,79 @@ if (kind2 != ""){
 	ptf2 = "←2番"
 	}
 	switch (kind2) {
-	case '普' :
+	case 'odpt.TrainType:Toei.Local' :
 	kind2 = "普通";
 	break;
-	case '速' :
+	case 'odpt.TrainType:Toei.Rapid' :
 	kind2 = "快速";
 	document.getElementById("a01dep21").style.backgroundColor = '#ff2b8a'
 	break;
-	case '特' :
+	case 'odpt.TrainType:Toei.LimitedExpress' :
 	kind2 = "特急";
 	document.getElementById("a01dep21").style.backgroundColor = '#ff0000'
 	break;
-	case '快' :
+	case 'odpt.TrainType:Toei.RapidLimitedExpress' :
 	kind2 = "快特";
 	document.getElementById("a01dep21").style.backgroundColor = '#00ff00'
 	break;
-	case '通' :
+	case 'odpt.TrainType:Toei.CommuterLimitedExpress' :
 	kind2 = "通特";
 	document.getElementById("a01dep21").style.backgroundColor = '#0000ff'
 	break;
-	case 'ア' :
+	case 'odpt.TrainType:Toei.AccessExpress' :
 	kind2 = "ア特";
 	document.getElementById("a01dep21").style.backgroundColor = '#ff3e00'
 	break;
 	}
 	switch (des2) {
-	case '泉' :
-	des2 = "泉岳寺";
-	break;
-	case '押' :
-	des2 = "押　上";
-	break;
-	case '青' :
-	des2 = "青　砥";
-	break;
-	case '高' :
+	case '[odpt.Station:Keisei.Main.KeiseiTakasago]':
 	des2 = "京成高砂";
 	break;
-	case '牧' :
-	des2 = "印西牧原";
+	case '[odpt.Station:Toei.Asakusa.Sengakuji]':
+	des2 = "泉岳寺";
 	break;
-	case '医' :
-	des2 = "印旛医大";
+	case '[odpt.Station:Toei.Asakusa.Magome]':
+	des2 = "馬　込";
 	break;
-	case '佐' :
+	case '[odpt.Station:Toei.Asakusa.Gotanda]':
+	des2 = "五反田";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Shimbashi]':
+	des2 = "新　橋";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Ningyocho]':
+	des2 = "人形町";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Asakusabashi]':
+	des2 = "浅草橋";
+	break;
+	case '[odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1]':
+	case '[odpt.Station:Keisei.Main.NaritaAirportTerminal1]':
+	des2 = "成田空港";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiSakura]':
 	des2 = "京成佐倉";
 	break;
-	case '成' :
+	case '[odpt.Station:Hokuso.Hokuso.ImbaNihonIdai]':
+	des2 = "印旛日医";
+	break;
+	case '[odpt.Station:Keisei.Oshiage.Aoto]':
+	des2 = "青　砥";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.InzaiMakinohara]':
+	des2 = "印西牧原";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Oshiage]':
+	des2 = "押　上";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiNarita]':
 	des2 = "京成成田";
 	break;
-	case '芝' :
-	des2 = "芝山千代";
+	case '[odpt.Station:Keisei.Main.Sogosando]':
+	des2 = "宗吾参道";
 	break;
-	case '空' :
-	des2 = "成田空港";
+	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
+	des2 = "芝山千代";
 	break;
 	default:
 	des2 = "―";

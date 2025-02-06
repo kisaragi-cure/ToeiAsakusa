@@ -38,6 +38,12 @@ background-color: #ffffff;
     padding: 7px;
     font-size: 14pt;
 }
+.mitabutton{
+    width: 120px;
+    height: 2em;
+    padding: 7px;
+    font-size: 14pt;
+}
 
 
 </style>
@@ -49,7 +55,7 @@ background-color: #ffffff;
 <font face="BIZ UDゴシック,メイリオ,ＭＳ ゴシック">
 
 <nobr>
-<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.1 01/24</p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024 / Ver.1.2 02/07</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:11pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。公共交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:11pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、公共交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -320,6 +326,8 @@ background-color: #ffffff;
 <div id="a08-2b" style="position: absolute; top: 3020px; left:475px; font-size:13pt; "></div>
 <div id="a08-2" style="position: absolute; top: 3020px; left:482px; font-size:13pt; "></div>
 <div id="a08-2c" style="position: absolute; top: 3075px; left:475px; font-size:13pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3030px; left:650px; font-size:24pt"><input type="button" id = "mita" value="都営三田線" class="mitabutton"></div>
 
 <!三田-泉岳寺>
 <div id="a08-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a08-07" disabled / name="address" size="14" value=""　></div>
@@ -876,6 +884,10 @@ background-color: #ffffff;
 
 document.getElementById("keisei").addEventListener("click", function () {
   location.href ="https://zaisen.tid-keisei.jp/html/zaisen.html?line=4";
+}, false);
+
+document.getElementById("mita").addEventListener("click", function () {
+  location.href ="https://kisaragi-cure.github.io/ToeiMita";
 }, false);
 
 var request2 = new XMLHttpRequest();
@@ -2262,7 +2274,7 @@ case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
 		dep1 = newkind[unban2].replaceAll('"','');
 		num1 = unban2.replaceAll('"','');
 		ptf1 = dest[unban2].replaceAll('"','');
-	if ( trid != '"odpt.RailDirection:Northbound"' ) {
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
 		des1 = des0;
 		kind1 = kind0;
 	}
@@ -2300,7 +2312,7 @@ case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
 		dep1 = newkind[unban2].replaceAll('"','');
 		num1 = unban2.replaceAll('"','');
 		ptf1 = dest[unban2].replaceAll('"','');
-	if ( trid != '"odpt.RailDirection:Northbound"' ) {
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
 		des1 = des0;
 		kind1 = kind0;
 	}
@@ -2503,7 +2515,7 @@ if (kind1 != ""){
 	break;
 	case 'odpt.TrainType:Toei.RapidLimitedExpress' :
 	kind1 = "快特";
-	document.getElementById("a01dep11").style.backgroundColor = '#00ff00'
+	document.getElementById("a01dep11").style.backgroundColor = '#00aa0e'
 	break;
 	case 'odpt.TrainType:Toei.CommuterLimitedExpress' :
 	kind1 = "通特";

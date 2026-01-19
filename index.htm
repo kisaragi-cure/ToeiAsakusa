@@ -2803,6 +2803,8 @@ let nowtime = Math.floor(Date.now() / 60000) ;
       let shinagawa = '';
       let shinagawaa = '';
       let shinagawab = '';
+      let shinagawac = '';
+
 
 	var kama3a = '';
 	var kama3b = '';
@@ -3201,17 +3203,16 @@ case ('"odpt.Station:Keikyu.Main.Shinagawa"'):
 		if ( des != '―') {
 		shinagawa = unban ; 
 		shinagawaa = newkind[unban1.replace('SH','H')] ; 
-		shinagawab = info ; 
+		shinagawab = info ;
 		sessionStorage.setItem('kstime', nowtime);
 		}
-		if ( des != '―' ){
 		delay = now - dest4 + 4 ;
 			if ( delay < 2 ){
 			delay = "";
 			}
 		} else {
 		delay = ""
-		}
+ 		shinagawac = delay ; 
 
 	}
 	break ;
@@ -4216,6 +4217,7 @@ if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
 	sessionStorage.setItem('shinagawa1a', shinagawa);
 	sessionStorage.setItem('shinagawa1b', shinagawaa);
 	sessionStorage.setItem('shinagawa1c', shinagawab);
+	sessionStorage.setItem('shinagawa1d', shinagawac);
 } else {
 
 	nameText = document.getElementById('kk-a07');
@@ -4225,6 +4227,7 @@ if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
 	doc1= document.getElementById("kk-a07c");  
 	doc2.innerHTML= sessionStorage.getItem("shinagawa1b") ;
 	doc0.innerHTML= sessionStorage.getItem("shinagawa1c");
+	doc1.innerHTML= sessionStorage.getItem("shinagawa1d");
 	doc0.style.backgroundColor = '#ffffff'; //背景
 	doc1.style.backgroundColor = '#ffffff'; //背景
 	doc2.style.backgroundColor = '#ffffff'; //背景
@@ -4251,18 +4254,22 @@ if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
 	sessionStorage.setItem('shinagawa2a', sessionStorage.getItem("shinagawa1a"));
 	sessionStorage.setItem('shinagawa2b', sessionStorage.getItem("shinagawa1b"));
 	sessionStorage.setItem('shinagawa2c', sessionStorage.getItem("shinagawa1c"));
+	sessionStorage.setItem('shinagawa2d', sessionStorage.getItem("shinagawa1d"));
 	sessionStorage.setItem('shinagawa1a', shinagawa);
 	sessionStorage.setItem('shinagawa1b', shinagawaa);
 	sessionStorage.setItem('shinagawa1c', shinagawab);
+	sessionStorage.setItem('shinagawa1d', shinagawac);
 }
 
 if ( sessionStorage.getItem("shinagawa2a") != '' && sessionStorage.getItem("shinagawa2a") != 'null') {
 	nameText = document.getElementById('kk-a07');
 	target = document.getElementById('kk-a07d');
 	doc2= document.getElementById("kk-a07e"); 
-	doc0= document.getElementById("kk-a07b");  
+	doc0= document.getElementById("kk-a07b"); 
+	doc1= document.getElementById("kk-a07c");   
 	doc2.innerHTML= sessionStorage.getItem("shinagawa2b") ;
 	doc0.innerHTML= sessionStorage.getItem("shinagawa2c");
+	doc1.innerHTML= sessionStorage.getItem("shinagawa2d");
 	doc0.style.backgroundColor = '#ffffff'; //背景
 	doc2.style.backgroundColor = '#ffffff'; //背景
 	switch (sessionStorage.getItem("shinagawa2b")) {

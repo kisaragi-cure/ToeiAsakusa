@@ -1,0 +1,2179 @@
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" content="noindex,noarchive,nofollow" />
+    <title>山手線/京浜東北線在線モニタ - 如月交通Ａ団</title>
+	<link rel="icon" href="jyk.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="15">
+
+<style type="text/css">
+
+body{
+	background-repeat: no-repeat;
+	background-image: url(jyk01.png);
+	background-size:1200px;
+	font-family:'BIZ UDゴシック','Arial',"Hiragino Sans",sans-serif;
+	zoom: 85%;
+	line-height: 16px;
+}
+
+textarea {
+width: 250px;
+height: 7em;
+}
+
+input[type="text"]:disabled {
+background-color: #ffffff;
+  color: inheri;
+  cursor: default;
+    font-size: 16pt;
+    width: 155px;
+}
+
+
+</style>
+
+  </head>
+
+
+  <body>
+
+<nobr>
+<p> 山手線・京浜東北線 [自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2026 / Ver.1.00 08/00</p>
+<div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>本アプリケーションが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。</p></div>
+<div style="position: absolute; top: 50px; left:10px; font-size:10pt"><p>公共交通事業者により提供されたデータを元にしていますが、必ずしも正確・完全なものとは限りません。</p></div>
+<div style="position: absolute; top: 65px; left:10px; font-size:10pt"><p>本アプリケーションの表示内容について、公共交通事業者への直接の問合せは行わないでください。</p></div>
+
+
+<div style="position: absolute; top: 95px; left:10px; font-size:11pt"><p>本Webアプリに関するお問い合わせ先(X)@cure_kisaragi</p></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="time" style="position: absolute; top: 30px; left:10px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 8px; left:320px; font-size:30pt"><input type="button" id = "joho" value="運行情報なし　　　　　　" ></div>
+
+<div style="position: absolute; top: 700px; left:340px; font-size:18pt"><p>池　袋</p></div>
+<div style="position: absolute; top: 735px; left:340px; color: #ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div id="jy01-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="jy01-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="jy01-1b" style="position: absolute; top: 710px; left:50px; font-size:12pt; "><br/></div>
+<div id="jy01-1" style="position: absolute; top: 710px; left:60px; font-size:12pt; "></div>
+<div id="jy01-1c" style="position: absolute; top: 755px; left:50px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy01-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy01-2a"  disabled / name="address" size="14" value=""></div>
+<div id="jy01-2b" style="position: absolute; top: 710px; left:130px; font-size:12pt; "><br/></div>
+<div id="jy01-2" style="position: absolute; top: 710px; left:140px; font-size:12pt; "></div>
+<div id="jy01-2c" style="position: absolute; top: 755px; left:130px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy01-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id = "jy01-3a"  disabled / name="address" size="14" value=""　></div>
+<div id="jy01-3b" style="position: absolute; top: 710px; left:190px; font-size:12pt; "><br/></div>
+<div id="jy01-3" style="position: absolute; top: 710px; left:200px; font-size:12pt; "></div>
+<div id="jy01-3c" style="position: absolute; top: 755px; left:190px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy01-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id = "jy01-4a"  disabled / name="address" size="14" value=""　></div>
+<div id="jy01-4b" style="position: absolute; top: 710px; left:270px; font-size:12pt; "><br/></div>
+<div id="jy01-4" style="position: absolute; top: 710px; left:280px; font-size:12pt; "></div>
+<div id="jy01-4c" style="position: absolute; top: 755px; left:270px; font-size:12pt; color:#FF0000; "></div>
+
+<!池袋-大塚>
+<div id="jy01-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy01-02" disabled / name="address" size="14" value=""　></div>
+<div id="jy01-02b" style="position: absolute; top: 560px; left:130px; font-size:12pt; "><br/></div>
+<div id="jy01-02e" style="position: absolute; top: 560px; left:140px; font-size:12pt; "></div>
+<div id="jy01-02c" style="position: absolute; top: 605px; left:130px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy02-01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy02-01" disabled / name="address" size="14" value=""　></div>
+<div id="jy02-01b" style="position: absolute; top: 560px; left:190px; font-size:12pt; "><br/></div>
+<div id="jy02-01e" style="position: absolute; top: 560px; left:200px; font-size:12pt; "></div>
+<div id="jy02-01c" style="position: absolute; top: 605px; left:190px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 350px; left:270px; font-size:18pt"><p>大　塚</p></div>
+<div id="jy02-1c" style="position: absolute; top: 430px; left:300px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy02-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy02-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jy02-1b" style="position: absolute; top: 415px; left:265px; font-size:12pt; "><br/></div>
+<div id="jy02-1" style="position: absolute; top: 415px; left:275px; font-size:12pt; "></div>
+<div id="jy02-2c" style="position: absolute; top: 510px; left:300px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy02-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy02-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy02-2b" style="position: absolute; top: 495px; left:265px; font-size:12pt; "><br/></div>
+<div id="jy02-2" style="position: absolute; top: 495px; left:275px; font-size:12pt; "></div>
+
+<!大塚-巣鴨>
+<div id="jy02-03c" style="position: absolute; top: 430px; left:400px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy02-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy02-03" disabled / name="address" size="14" value=""　></div>
+<div id="jy02-03b" style="position: absolute; top: 415px; left:365px; font-size:12pt; "><br/></div>
+<div id="jy02-03e" style="position: absolute; top: 415px; left:375px; font-size:12pt; "></div>
+<div id="jy03-02c" style="position: absolute; top: 510px; left:400px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy03-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy03-02" disabled / name="address" size="14" value=""　></div>
+<div id="jy03-02b" style="position: absolute; top: 495px; left:365px; font-size:12pt; "><br/></div>
+<div id="jy03-02e" style="position: absolute; top: 495px; left:375px; font-size:12pt; "></div>
+
+<div id="ty99d" style="position: absolute; top: -100px; left:-100px; font-size:18pt"　><input type="text"  id = "ty99" disabled / name="address" size="100" value="試験"　></div>
+
+<div style="position: absolute; top: 350px; left:470px; font-size:18pt"><p>巣　鴨</p></div>
+<div id="jy03-1c" style="position: absolute; top: 430px; left:500px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy03-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy03-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jy03-1b" style="position: absolute; top: 415px; left:465px; font-size:12pt; "><br/></div>
+<div id="jy03-1" style="position: absolute; top: 415px; left:475px; font-size:12pt; "></div>
+<div id="jy03-2c" style="position: absolute; top: 510px; left:500px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy03-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy03-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy03-2b" style="position: absolute; top: 495px; left:465px; font-size:12pt; "><br/></div>
+<div id="jy03-2" style="position: absolute; top: 495px; left:475px; font-size:12pt; "></div>
+
+<!巣鴨-駒込>
+<div id="jy03-04c" style="position: absolute; top: 430px; left:605px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy03-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy03-04" disabled / name="address" size="14" value=""　></div>
+<div id="jy03-04b" style="position: absolute; top: 415px; left:570px; font-size:12pt; "><br/></div>
+<div id="jy03-04e" style="position: absolute; top: 415px; left:580px; font-size:12pt; "></div>
+<div id="jy04-03c" style="position: absolute; top: 510px; left:605px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy04-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy04-03" disabled / name="address" size="14" value=""　></div>
+<div id="jy04-03b" style="position: absolute; top: 495px; left:570px; font-size:12pt; "><br/></div>
+<div id="jy04-03e" style="position: absolute; top: 495px; left:580px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 350px; left:670px; font-size:18pt"><p>駒　込</p></div>
+<div id="jy04-1c" style="position: absolute; top: 430px; left:705px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy04-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy04-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jy04-1b" style="position: absolute; top: 415px; left:670px; font-size:12pt; "><br/></div>
+<div id="jy04-1" style="position: absolute; top: 415px; left:680px; font-size:12pt; "></div>
+<div id="jy04-2c" style="position: absolute; top: 510px; left:705px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy04-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy04-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy04-2b" style="position: absolute; top: 495px; left:670px; font-size:12pt; "><br/></div>
+<div id="jy04-2" style="position: absolute; top: 495px; left:680px; font-size:12pt; "></div>
+
+<!上中里-田端>
+<div id="jk04-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk04-05" disabled / name="address" size="14" value=""　></div>
+<div id="jk04-05b" style="position: absolute; top: 375px; left:1010px; font-size:12pt; "></div>
+<div id="jk04-05e" style="position: absolute; top: 375px; left:1015px; font-size:12pt; "></div>
+<div id="jk04-05c" style="position: absolute; top: 420px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk05-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk05-04" disabled / name="address" size="14" value=""　></div>
+<div id="jk05-04b" style="position: absolute; top: 375px; left:930px; font-size:12pt; "></div>
+<div id="jk05-04e" style="position: absolute; top: 375px; left:935px; font-size:12pt; "></div>
+<div id="jk05-04c" style="position: absolute; top: 420px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<!駒込-田端>
+<div id="jy04-05c" style="position: absolute; top: 430px; left:805px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy04-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy04-05" disabled / name="address" size="14" value=""　></div>
+<div id="jy04-05b" style="position: absolute; top: 415px; left:770px; font-size:12pt; "><br/></div>
+<div id="jy04-05e" style="position: absolute; top: 415px; left:780px; font-size:12pt; "></div>
+<div id="jy05-04c" style="position: absolute; top: 510px; left:805px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy05-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy05-04" disabled / name="address" size="14" value=""　></div>
+<div id="jy05-04b" style="position: absolute; top: 495px; left:770px; font-size:12pt; "><br/></div>
+<div id="jy05-04e" style="position: absolute; top: 495px; left:780px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 610px; left:680px; font-size:18pt"><p>田　端</p></div>
+<div id="jk05-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk05-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jk05-1b" style="position: absolute; top: 610px; left:1010px; font-size:12pt; "></div>
+<div id="jk05-1" style="position: absolute; top: 610px; left:1015px; font-size:12pt; "></div>
+<div id="jk05-1c" style="position: absolute; top: 655px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy05-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy05-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy05-2b" style="position: absolute; top: 610px; left:930px; font-size:12pt; "></div>
+<div id="jy05-2" style="position: absolute; top: 610px; left:940px; font-size:12pt; "></div>
+<div id="jy05-2c" style="position: absolute; top: 655px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy05-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy05-3a" disabled / name="address" size="14" value=""　></div>
+<div id="jy05-3b" style="position: absolute; top: 610px; left:870px; font-size:12pt; "></div>
+<div id="jy05-3" style="position: absolute; top: 610px; left:880px; font-size:12pt; "></div>
+<div id="jy05-3c" style="position: absolute; top: 655px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk05-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk05-4a" disabled / name="address" size="14" value=""　></div>
+<div id="jk05-4b" style="position: absolute; top: 610px; left:790px; font-size:12pt; "></div>
+<div id="jk05-4" style="position: absolute; top: 610px; left:795px; font-size:12pt; "></div>
+<div id="jk05-4c" style="position: absolute; top: 655px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<!田端-西日暮里>
+<div id="jk05-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk05-06" disabled / name="address" size="14" value=""　></div>
+<div id="jk05-06b" style="position: absolute; top: 755px; left:1010px; font-size:12pt; "></div>
+<div id="jk05-06e" style="position: absolute; top: 755px; left:1015px; font-size:12pt; "></div>
+<div id="jk05-06c" style="position: absolute; top: 800px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy05-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy05-06" disabled / name="address" size="14" value=""　></div>
+<div id="jy05-06b" style="position: absolute; top: 755px; left:930px; font-size:12pt; "></div>
+<div id="jy05-06e" style="position: absolute; top: 755px; left:940px; font-size:12pt; "></div>
+<div id="jy05-06c" style="position: absolute; top: 800px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy06-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy06-05" disabled / name="address" size="14" value=""　></div>
+<div id="jy06-05b" style="position: absolute; top: 755px; left:870px; font-size:12pt; "></div>
+<div id="jy06-05e" style="position: absolute; top: 755px; left:880px; font-size:12pt; "></div>
+<div id="jy06-05c" style="position: absolute; top: 800px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk06-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk06-05" disabled / name="address" size="14" value=""　></div>
+<div id="jk06-05b" style="position: absolute; top: 755px; left:790px; font-size:12pt; "></div>
+<div id="jk06-05e" style="position: absolute; top: 755px; left:795px; font-size:12pt; "></div>
+<div id="jk06-05c" style="position: absolute; top: 800px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 850px; left:680px; font-size:18pt"><p>西日暮里</p></div>
+<div id="jk06-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk06-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jk06-1b" style="position: absolute; top: 850px; left:1010px; font-size:12pt; "></div>
+<div id="jk06-1" style="position: absolute; top: 850px; left:1015px; font-size:12pt; "></div>
+<div id="jk06-1c" style="position: absolute; top: 895px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy06-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy06-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy06-2b" style="position: absolute; top: 850px; left:930px; font-size:12pt; "></div>
+<div id="jy06-2" style="position: absolute; top: 850px; left:940px; font-size:12pt; "></div>
+<div id="jy06-2c" style="position: absolute; top: 895px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy06-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy06-3a" disabled / name="address" size="14" value=""　></div>
+<div id="jy06-3b" style="position: absolute; top: 850px; left:870px; font-size:12pt; "></div>
+<div id="jy06-3" style="position: absolute; top: 850px; left:880px; font-size:12pt; "></div>
+<div id="jy06-3c" style="position: absolute; top: 895px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk06-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk06-4a" disabled / name="address" size="14" value=""　></div>
+<div id="jk06-4b" style="position: absolute; top: 850px; left:790px; font-size:12pt; "></div>
+<div id="jk06-4" style="position: absolute; top: 850px; left:795px; font-size:12pt; "></div>
+<div id="jk06-4c" style="position: absolute; top: 895px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<!西日暮里-日暮里>
+<div id="jk06-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy06-07" disabled / name="address" size="14" value=""　></div>
+<div id="jk06-07b" style="position: absolute; top: 945px; left:1010px; font-size:12pt; "></div>
+<div id="jk06-07e" style="position: absolute; top: 945px; left:1015px; font-size:12pt; "></div>
+<div id="jk06-07c" style="position: absolute; top: 990px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy06-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk06-07" disabled / name="address" size="14" value=""　></div>
+<div id="jy06-07b" style="position: absolute; top: 945px; left:930px; font-size:12pt; "></div>
+<div id="jy06-07e" style="position: absolute; top: 945px; left:940px; font-size:12pt; "></div>
+<div id="jy06-07c" style="position: absolute; top: 990px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy07-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy07-06" disabled / name="address" size="14" value=""　></div>
+<div id="jy07-06b" style="position: absolute; top: 945px; left:870px; font-size:12pt; "></div>
+<div id="jy07-06e" style="position: absolute; top: 945px; left:880px; font-size:12pt; "></div>
+<div id="jy07-06c" style="position: absolute; top: 990px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk07-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk07-06" disabled / name="address" size="14" value=""　></div>
+<div id="jk07-06b" style="position: absolute; top: 945px; left:790px; font-size:12pt; "></div>
+<div id="jk07-06e" style="position: absolute; top: 945px; left:795px; font-size:12pt; "></div>
+<div id="jk07-06c" style="position: absolute; top: 990px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1035px; left:680px; font-size:18pt"><p>日暮里</p></div>
+<div id="jk07-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk07-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jk07-1b" style="position: absolute; top: 1035px; left:1010px; font-size:12pt; "></div>
+<div id="jk07-1" style="position: absolute; top: 1035px; left:1015px; font-size:12pt; "></div>
+<div id="jk07-1c" style="position: absolute; top: 1080px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy07-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy07-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy07-2b" style="position: absolute; top: 1035px; left:930px; font-size:12pt; "></div>
+<div id="jy07-2" style="position: absolute; top: 1035px; left:940px; font-size:12pt; "></div>
+<div id="jy07-2c" style="position: absolute; top: 1080px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy07-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy07-3a" disabled / name="address" size="14" value=""　></div>
+<div id="jy07-3b" style="position: absolute; top: 1035px; left:870px; font-size:12pt; "></div>
+<div id="jy07-3" style="position: absolute; top: 1035px; left:880px; font-size:12pt; "></div>
+<div id="jy07-3c" style="position: absolute; top: 1080px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk07-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk07-4a" disabled / name="address" size="14" value=""　></div>
+<div id="jk07-4b" style="position: absolute; top: 1035px; left:790px; font-size:12pt; "></div>
+<div id="jk07-4" style="position: absolute; top: 1035px; left:795px; font-size:12pt; "></div>
+<div id="jk07-4c" style="position: absolute; top: 1080px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<!日暮里-鶯谷>
+<div id="jk07-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk07-08" disabled / name="address" size="14" value=""　></div>
+<div id="jk07-08b" style="position: absolute; top: 1130px; left:1010px; font-size:12pt; "></div>
+<div id="jk07-08e" style="position: absolute; top: 1130px; left:1015px; font-size:12pt; "></div>
+<div id="jk07-08c" style="position: absolute; top: 1175px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy07-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy07-08" disabled / name="address" size="14" value=""　></div>
+<div id="jy07-08b" style="position: absolute; top: 1130px; left:930px; font-size:12pt; "></div>
+<div id="jy07-08e" style="position: absolute; top: 1130px; left:940px; font-size:12pt; "></div>
+<div id="jy07-08c" style="position: absolute; top: 1175px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy08-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy08-07" disabled / name="address" size="14" value=""　></div>
+<div id="jy08-07b" style="position: absolute; top: 1130px; left:870px; font-size:12pt; "></div>
+<div id="jy08-07e" style="position: absolute; top: 1130px; left:880px; font-size:12pt; "></div>
+<div id="jy08-07c" style="position: absolute; top: 1175px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk08-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk08-07" disabled / name="address" size="14" value=""　></div>
+<div id="jk08-07b" style="position: absolute; top: 1130px; left:790px; font-size:12pt; "></div>
+<div id="jk08-07e" style="position: absolute; top: 1130px; left:795px; font-size:12pt; "></div>
+<div id="jk08-07c" style="position: absolute; top: 1175px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1220px; left:680px; font-size:18pt"><p>鶯　谷</p></div>
+<div id="jk08-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk08-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jk08-1b" style="position: absolute; top: 1220px; left:1010px; font-size:12pt; "></div>
+<div id="jk08-1" style="position: absolute; top: 1220px; left:1015px; font-size:12pt; "></div>
+<div id="jk08-1c" style="position: absolute; top: 1265px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy08-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy08-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy08-2b" style="position: absolute; top: 1220px; left:930px; font-size:12pt; "></div>
+<div id="jy08-2" style="position: absolute; top: 1220px; left:940px; font-size:12pt; "></div>
+<div id="jy08-2c" style="position: absolute; top: 1265px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy08-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy08-3a" disabled / name="address" size="14" value=""　></div>
+<div id="jy08-3b" style="position: absolute; top: 1220px; left:870px; font-size:12pt; "></div>
+<div id="jy08-3" style="position: absolute; top: 1220px; left:880px; font-size:12pt; "></div>
+<div id="jy08-3c" style="position: absolute; top: 1265px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk08-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk08-4a" disabled / name="address" size="14" value=""　></div>
+<div id="jk08-4b" style="position: absolute; top: 1220px; left:790px; font-size:12pt; "></div>
+<div id="jk08-4" style="position: absolute; top: 1220px; left:795px; font-size:12pt; "></div>
+<div id="jk08-4c" style="position: absolute; top: 1265px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<!鶯谷-上野>
+<div id="jk08-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk08-09" disabled / name="address" size="14" value=""　></div>
+<div id="jk08-09b" style="position: absolute; top: 1315px; left:1010px; font-size:12pt; "></div>
+<div id="jk08-09e" style="position: absolute; top: 1315px; left:1015px; font-size:12pt; "></div>
+<div id="jk08-09c" style="position: absolute; top: 1360px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy08-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy08-09" disabled / name="address" size="14" value=""　></div>
+<div id="jy08-09b" style="position: absolute; top: 1315px; left:930px; font-size:12pt; "></div>
+<div id="jy08-09e" style="position: absolute; top: 1315px; left:940px; font-size:12pt; "></div>
+<div id="jy08-09c" style="position: absolute; top: 1360px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy09-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy09-08" disabled / name="address" size="14" value=""　></div>
+<div id="jy09-08b" style="position: absolute; top: 1315px; left:870px; font-size:12pt; "></div>
+<div id="jy09-08e" style="position: absolute; top: 1315px; left:880px; font-size:12pt; "></div>
+<div id="jy09-08c" style="position: absolute; top: 1360px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk09-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk09-08" disabled / name="address" size="14" value=""　></div>
+<div id="jk09-08b" style="position: absolute; top: 1315px; left:790px; font-size:12pt; "></div>
+<div id="jk09-08e" style="position: absolute; top: 1315px; left:795px; font-size:12pt; "></div>
+<div id="jk09-08c" style="position: absolute; top: 1360px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1470px; left:680px; font-size:18pt"><p>上　野</p></div>
+<div id="jk09-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk09-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jk09-1b" style="position: absolute; top: 1470px; left:1010px; font-size:12pt; "></div>
+<div id="jk09-1" style="position: absolute; top: 1470px; left:1015px; font-size:12pt; "></div>
+<div id="jk09-1c" style="position: absolute; top: 1505px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy09-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy09-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy09-2b" style="position: absolute; top: 1470px; left:930px; font-size:12pt; "></div>
+<div id="jy09-2" style="position: absolute; top: 1470px; left:940px; font-size:12pt; "></div>
+<div id="jy09-2c" style="position: absolute; top: 1505px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy09-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy09-3a" disabled / name="address" size="14" value=""　></div>
+<div id="jy09-3b" style="position: absolute; top: 1470px; left:870px; font-size:12pt; "></div>
+<div id="jy09-3" style="position: absolute; top: 1470px; left:880px; font-size:12pt; "></div>
+<div id="jy09-3c" style="position: absolute; top: 1505px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk09-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk09-4a" disabled / name="address" size="14" value=""　></div>
+<div id="jk09-4b" style="position: absolute; top: 1470px; left:790px; font-size:12pt; "></div>
+<div id="jk09-4" style="position: absolute; top: 1470px; left:795px; font-size:12pt; "></div>
+<div id="jk09-4c" style="position: absolute; top: 1505px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<!上野-御徒町>
+<div id="jk09-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk09-10" disabled / name="address" size="14" value=""　></div>
+<div id="jk09-10b" style="position: absolute; top: 1565px; left:1010px; font-size:12pt; "></div>
+<div id="jk09-10e" style="position: absolute; top: 1565px; left:1015px; font-size:12pt; "></div>
+<div id="jk09-10c" style="position: absolute; top: 1600px; left:1010px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy09-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy09-10" disabled / name="address" size="14" value=""　></div>
+<div id="jy09-10b" style="position: absolute; top: 1565px; left:930px; font-size:12pt; "></div>
+<div id="jy09-10e" style="position: absolute; top: 1565px; left:940px; font-size:12pt; "></div>
+<div id="jy09-10c" style="position: absolute; top: 1600px; left:930px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy10-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy10-09" disabled / name="address" size="14" value=""　></div>
+<div id="jy10-09b" style="position: absolute; top: 1565px; left:870px; font-size:12pt; "></div>
+<div id="jy10-09e" style="position: absolute; top: 1565px; left:880px; font-size:12pt; "></div>
+<div id="jy10-09c" style="position: absolute; top: 1600px; left:870px; font-size:12pt; color:#FF0000; "></div>
+<div id="jk10-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jk10-09" disabled / name="address" size="14" value=""　></div>
+<div id="jk10-09b" style="position: absolute; top: 1565px; left:790px; font-size:12pt; "></div>
+<div id="jk10-09e" style="position: absolute; top: 1565px; left:795px; font-size:12pt; "></div>
+<div id="jk10-09c" style="position: absolute; top: 1600px; left:790px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1655px; left:680px; font-size:18pt"><p>御徒町</p></div>
+<div id="tj10-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj10-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj10-1b" style="position: absolute; top: 2630px; left:595px; font-size:12pt; "></div>
+<div id="tj10-1" style="position: absolute; top: 2630px; left:605px; font-size:12pt; "></div>
+<div id="tj10-1c" style="position: absolute; top: 2685px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj10-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj10-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj10-2b" style="position: absolute; top: 2630px; left:515px; font-size:12pt; "></div>
+<div id="tj10-2" style="position: absolute; top: 2630px; left:525px; font-size:12pt; "></div>
+<div id="tj10-2c" style="position: absolute; top: 2685px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj10-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj10-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj10-3b" style="position: absolute; top: 2630px; left:455px; font-size:12pt; "></div>
+<div id="tj10-3" style="position: absolute; top: 2630px; left:465px; font-size:12pt; "></div>
+<div id="tj10-3c" style="position: absolute; top: 2685px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj10-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj10-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj10-4b" style="position: absolute; top: 2630px; left:375px; font-size:12pt; "></div>
+<div id="tj10-4" style="position: absolute; top: 2630px; left:385px; font-size:12pt; "></div>
+<div id="tj10-4c" style="position: absolute; top: 2685px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!成増-和光市>
+<div id="tj10-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj10-11" disabled / name="address" size="14" value=""　></div>
+<div id="tj10-11b" style="position: absolute; top: 2810px; left:515px; font-size:12pt; "></div>
+<div id="tj10-11e" style="position: absolute; top: 2810px; left:525px; font-size:12pt; "></div>
+<div id="tj10-11c" style="position: absolute; top: 2865px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj11-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-10" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-10b" style="position: absolute; top: 2810px; left:455px; font-size:12pt; "></div>
+<div id="tj11-10e" style="position: absolute; top: 2810px; left:465px; font-size:12pt; "></div>
+<div id="tj11-10c" style="position: absolute; top: 2865px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 2990px; left:280px; font-size:18pt"><p>和光市</p></div>
+<div id="tj11-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-1b" style="position: absolute; top: 2990px; left:595px; font-size:12pt; "></div>
+<div id="tj11-1" style="position: absolute; top: 2990px; left:605px; font-size:12pt; "></div>
+<div id="tj11-1c" style="position: absolute; top: 3045px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj11-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-2b" style="position: absolute; top: 2990px; left:515px; font-size:12pt; "></div>
+<div id="tj11-2" style="position: absolute; top: 2990px; left:525px; font-size:12pt; "></div>
+<div id="tj11-2c" style="position: absolute; top: 3045px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj11-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-3b" style="position: absolute; top: 3120px; left:435px; font-size:12pt; "></div>
+<div id="tj11-3" style="position: absolute; top: 3120px; left:445px; font-size:12pt; "></div>
+<div id="tj11-3c" style="position: absolute; top: 3175px; left:435px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div id="tj11-Mad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-Ma" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-Mb" style="position: absolute; top: 2990px; left:455px; font-size:12pt; "></div>
+<div id="tj11-M" style="position: absolute; top: 2990px; left:465px; font-size:12pt; "></div>
+<div id="tj11-Mc" style="position: absolute; top: 3045px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div id="tj11-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-4b" style="position: absolute; top: 2990px; left:375px; font-size:12pt; "></div>
+<div id="tj11-4" style="position: absolute; top: 2990px; left:385px; font-size:12pt; "></div>
+<div id="tj11-4c" style="position: absolute; top: 3045px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!和光市-朝霞>
+<div id="tj11-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj11-12" disabled / name="address" size="14" value=""　></div>
+<div id="tj11-12b" style="position: absolute; top: 3240px; left:595px; font-size:12pt; "></div>
+<div id="tj11-12e" style="position: absolute; top: 3240px; left:605px; font-size:12pt; "></div>
+<div id="tj11-12c" style="position: absolute; top: 3295px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju11-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju11-12" disabled / name="address" size="14" value=""　></div>
+<div id="tju11-12b" style="position: absolute; top: 3240px; left:535px; font-size:12pt; "></div>
+<div id="tju11-12e" style="position: absolute; top: 3240px; left:545px; font-size:12pt; "></div>
+<div id="tju11-12c" style="position: absolute; top: 3295px; left:535px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju12-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju12-11" disabled / name="address" size="14" value=""　></div>
+<div id="tju12-11b" style="position: absolute; top: 3240px; left:435px; font-size:12pt; "></div>
+<div id="tju12-11e" style="position: absolute; top: 3240px; left:445px; font-size:12pt; "></div>
+<div id="tju12-11c" style="position: absolute; top: 3295px; left:435px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj12-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-11" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-11b" style="position: absolute; top: 3240px; left:375px; font-size:12pt; "></div>
+<div id="tj12-11e" style="position: absolute; top: 3240px; left:385px; font-size:12pt; "></div>
+<div id="tj12-11c" style="position: absolute; top: 3295px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div style="position: absolute; top: 3370px; left:280px; font-size:18pt"><p>朝　霞</p></div>
+<div style="position: absolute; top: 3410px; left:220px; color: #ff0000; font-size:10pt"><p>※実番線と異なります</p></div>
+<div id="tj12-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-1b" style="position: absolute; top: 3370px; left:595px; font-size:12pt; "></div>
+<div id="tj12-1" style="position: absolute; top: 3370px; left:605px; font-size:12pt; "></div>
+<div id="tj12-1c" style="position: absolute; top: 3425px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj12-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-2b" style="position: absolute; top: 3370px; left:515px; font-size:12pt; "></div>
+<div id="tj12-2" style="position: absolute; top: 3370px; left:525px; font-size:12pt; "></div>
+<div id="tj12-2c" style="position: absolute; top: 3425px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj12-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-3b" style="position: absolute; top: 3370px; left:455px; font-size:12pt; "></div>
+<div id="tj12-3" style="position: absolute; top: 3370px; left:465px; font-size:12pt; "></div>
+<div id="tj12-3c" style="position: absolute; top: 3425px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj12-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-4b" style="position: absolute; top: 3370px; left:375px; font-size:12pt; "></div>
+<div id="tj12-4" style="position: absolute; top: 3370px; left:385px; font-size:12pt; "></div>
+<div id="tj12-4c" style="position: absolute; top: 3425px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!朝霞-朝霞台>
+<div id="tj12-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj12-13" disabled / name="address" size="14" value=""　></div>
+<div id="tj12-13b" style="position: absolute; top: 3470px; left:595px; font-size:12pt; "></div>
+<div id="tj12-13e" style="position: absolute; top: 3470px; left:605px; font-size:12pt; "></div>
+<div id="tj12-13c" style="position: absolute; top: 3525px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju12-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju12-13" disabled / name="address" size="14" value=""　></div>
+<div id="tju12-13b" style="position: absolute; top: 3470px; left:515px; font-size:12pt; "></div>
+<div id="tju12-13e" style="position: absolute; top: 3470px; left:525px; font-size:12pt; "></div>
+<div id="tju12-13c" style="position: absolute; top: 3525px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju13-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju13-12" disabled / name="address" size="14" value=""　></div>
+<div id="tju13-12b" style="position: absolute; top: 3470px; left:455px; font-size:12pt; "></div>
+<div id="tju13-12e" style="position: absolute; top: 3470px; left:465px; font-size:12pt; "></div>
+<div id="tju13-12c" style="position: absolute; top: 3525px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj13-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-12" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-12b" style="position: absolute; top: 3470px; left:375px; font-size:12pt; "></div>
+<div id="tj13-12e" style="position: absolute; top: 3470px; left:385px; font-size:12pt; "></div>
+<div id="tj13-12c" style="position: absolute; top: 3525px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3570px; left:280px; font-size:18pt"><p>朝霞台</p></div>
+<div style="position: absolute; top: 3610px; left:220px; color: #ff0000; font-size:10pt"><p>※実番線と異なります</p></div>
+<div id="tj13-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-1b" style="position: absolute; top: 3570px; left:595px; font-size:12pt; "></div>
+<div id="tj13-1" style="position: absolute; top: 3570px; left:605px; font-size:12pt; "></div>
+<div id="tj13-1c" style="position: absolute; top: 3625px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj13-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-2b" style="position: absolute; top: 3570px; left:515px; font-size:12pt; "></div>
+<div id="tj13-2" style="position: absolute; top: 3570px; left:525px; font-size:12pt; "></div>
+<div id="tj13-2c" style="position: absolute; top: 3625px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj13-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-3b" style="position: absolute; top: 3570px; left:455px; font-size:12pt; "></div>
+<div id="tj13-3" style="position: absolute; top: 3570px; left:465px; font-size:12pt; "></div>
+<div id="tj13-3c" style="position: absolute; top: 3625px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj13-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-4b" style="position: absolute; top: 3570px; left:375px; font-size:12pt; "></div>
+<div id="tj13-4" style="position: absolute; top: 3570px; left:385px; font-size:12pt; "></div>
+<div id="tj13-4c" style="position: absolute; top: 3625px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!朝霞台-志木>
+<div id="tj13-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj13-14" disabled / name="address" size="14" value=""　></div>
+<div id="tj13-14b" style="position: absolute; top: 3665px; left:595px; font-size:12pt; "></div>
+<div id="tj13-14e" style="position: absolute; top: 3665px; left:605px; font-size:12pt; "></div>
+<div id="tj13-14c" style="position: absolute; top: 3720px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju13-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju13-14" disabled / name="address" size="14" value=""　></div>
+<div id="tju13-14b" style="position: absolute; top: 3665px; left:515px; font-size:12pt; "></div>
+<div id="tju13-14e" style="position: absolute; top: 3665px; left:525px; font-size:12pt; "></div>
+<div id="tju13-14c" style="position: absolute; top: 3720px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tju14-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tju14-13" disabled / name="address" size="14" value=""　></div>
+<div id="tju14-13b" style="position: absolute; top: 3665px; left:455px; font-size:12pt; "></div>
+<div id="tju14-13e" style="position: absolute; top: 3665px; left:465px; font-size:12pt; "></div>
+<div id="tju14-13c" style="position: absolute; top: 3720px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj14-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-13" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-13b" style="position: absolute; top: 3665px; left:375px; font-size:12pt; "></div>
+<div id="tj14-13e" style="position: absolute; top: 3665px; left:385px; font-size:12pt; "></div>
+<div id="tj14-13c" style="position: absolute; top: 3720px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3720px; left:230px; font-size:12pt"><p>[SP]志木区分 ＞</p></div>
+
+<div style="position: absolute; top: 3810px; left:280px; font-size:18pt"><p>志　木</p></div>
+<div style="position: absolute; top: 3850px; left:220px; color: #ff0000; font-size:10pt"><p>※実番線と異なります</p></div>
+<div id="tj14-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-1b" style="position: absolute; top: 3820px; left:595px; font-size:12pt; "></div>
+<div id="tj14-1" style="position: absolute; top: 3820px; left:605px; font-size:12pt; "></div>
+<div id="tj14-1c" style="position: absolute; top: 3875px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj14-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-2b" style="position: absolute; top: 3820px; left:515px; font-size:12pt; "></div>
+<div id="tj14-2" style="position: absolute; top: 3820px; left:525px; font-size:12pt; "></div>
+<div id="tj14-2c" style="position: absolute; top: 3875px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj14-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-3b" style="position: absolute; top: 3820px; left:455px; font-size:12pt; "></div>
+<div id="tj14-3" style="position: absolute; top: 3820px; left:465px; font-size:12pt; "></div>
+<div id="tj14-3c" style="position: absolute; top: 3875px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj14-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-4b" style="position: absolute; top: 3820px; left:375px; font-size:12pt; "></div>
+<div id="tj14-4" style="position: absolute; top: 3820px; left:385px; font-size:12pt; "></div>
+<div id="tj14-4c" style="position: absolute; top: 3875px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!志木-柳瀬川>
+<div id="tj14-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj14-15" disabled / name="address" size="14" value=""　></div>
+<div id="tj14-15b" style="position: absolute; top: 3970px; left:595px; font-size:12pt; "></div>
+<div id="tj14-15e" style="position: absolute; top: 3970px; left:605px; font-size:12pt; "></div>
+<div id="tj14-15c" style="position: absolute; top: 4025px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj15-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj15-14" disabled / name="address" size="14" value=""　></div>
+<div id="tj15-14b" style="position: absolute; top: 3970px; left:375px; font-size:12pt; "></div>
+<div id="tj15-14e" style="position: absolute; top: 3970px; left:385px; font-size:12pt; "></div>
+<div id="tj15-14c" style="position: absolute; top: 4025px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4100px; left:280px; font-size:18pt"><p>柳瀬川</p></div>
+<div id="tj15-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj15-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj15-1b" style="position: absolute; top: 4100px; left:525px; font-size:12pt; "></div>
+<div id="tj15-1" style="position: absolute; top: 4100px; left:535px; font-size:12pt; "></div>
+<div id="tj15-1c" style="position: absolute; top: 4155px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj15-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj15-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj15-2b" style="position: absolute; top: 4100px; left:445px; font-size:12pt; "></div>
+<div id="tj15-2" style="position: absolute; top: 4100px; left:455px; font-size:12pt; "></div>
+<div id="tj15-2c" style="position: absolute; top: 4155px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4195px; left:300px; font-size:12pt"><p>[SS]柳瀬川変電 ＞</p></div>
+<!柳瀬川-みずほ>
+<div id="tj15-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj15-16" disabled / name="address" size="14" value=""　></div>
+<div id="tj15-16b" style="position: absolute; top: 4195px; left:525px; font-size:12pt; "></div>
+<div id="tj15-16e" style="position: absolute; top: 4195px; left:535px; font-size:12pt; "></div>
+<div id="tj15-16c" style="position: absolute; top: 4250px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj16-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj16-15" disabled / name="address" size="14" value=""　></div>
+<div id="tj16-15b" style="position: absolute; top: 4195px; left:445px; font-size:12pt; "></div>
+<div id="tj16-15e" style="position: absolute; top: 4195px; left:455px; font-size:12pt; "></div>
+<div id="tj16-15c" style="position: absolute; top: 4250px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4290px; left:270px; font-size:18pt"><p>みずほ台</p></div>
+<div id="tj16-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj16-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj16-1b" style="position: absolute; top: 4290px; left:525px; font-size:12pt; "></div>
+<div id="tj16-1" style="position: absolute; top: 4290px; left:535px; font-size:12pt; "></div>
+<div id="tj16-1c" style="position: absolute; top: 4345px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj16-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj16-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj16-2b" style="position: absolute; top: 4290px; left:445px; font-size:12pt; "></div>
+<div id="tj16-2" style="position: absolute; top: 4290px; left:455px; font-size:12pt; "></div>
+<div id="tj16-2c" style="position: absolute; top: 4345px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!みずほ-鶴瀬>
+<div id="tj16-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj16-17" disabled / name="address" size="14" value=""　></div>
+<div id="tj16-17b" style="position: absolute; top: 4385px; left:525px; font-size:12pt; "></div>
+<div id="tj16-17e" style="position: absolute; top: 4385px; left:535px; font-size:12pt; "></div>
+<div id="tj16-17c" style="position: absolute; top: 4440px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj17-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj17-16" disabled / name="address" size="14" value=""　></div>
+<div id="tj17-16b" style="position: absolute; top: 4385px; left:445px; font-size:12pt; "></div>
+<div id="tj17-16e" style="position: absolute; top: 4385px; left:455px; font-size:12pt; "></div>
+<div id="tj17-16c" style="position: absolute; top: 4440px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4480px; left:280px; font-size:18pt"><p>鶴　瀬</p></div>
+<div id="tj17-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj17-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj17-1b" style="position: absolute; top: 4480px; left:525px; font-size:12pt; "></div>
+<div id="tj17-1" style="position: absolute; top: 4480px; left:535px; font-size:12pt; "></div>
+<div id="tj17-1c" style="position: absolute; top: 4535px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj17-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj17-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj17-2b" style="position: absolute; top: 4480px; left:445px; font-size:12pt; "></div>
+<div id="tj17-2" style="position: absolute; top: 4480px; left:455px; font-size:12pt; "></div>
+<div id="tj17-2c" style="position: absolute; top: 4535px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!鶴瀬-ふじみ野>
+<div id="tj17-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj17-18" disabled / name="address" size="14" value=""　></div>
+<div id="tj17-18b" style="position: absolute; top: 4600px; left:515px; font-size:12pt; "></div>
+<div id="tj17-18e" style="position: absolute; top: 4600px; left:525px; font-size:12pt; "></div>
+<div id="tj17-18c" style="position: absolute; top: 4655px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj18-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-17" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-17b" style="position: absolute; top: 4600px; left:455px; font-size:12pt; "></div>
+<div id="tj18-17e" style="position: absolute; top: 4600px; left:465px; font-size:12pt; "></div>
+<div id="tj18-17c" style="position: absolute; top: 4655px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4655px; left:280px; font-size:12pt"><p>[SS]ふじみ野変電 ＞</p></div>
+
+<div style="position: absolute; top: 4740px; left:260px; font-size:18pt"><p>ふじみ野</p></div>
+<div style="position: absolute; top: 4780px; left:220px; color: #ff0000; font-size:10pt"><p>※実番線と異なります</p></div>
+<div id="tj18-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-1b" style="position: absolute; top: 4740px; left:595px; font-size:12pt; "></div>
+<div id="tj18-1" style="position: absolute; top: 4740px; left:605px; font-size:12pt; "></div>
+<div id="tj18-1c" style="position: absolute; top: 4795px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj18-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-2b" style="position: absolute; top: 4740px; left:515px; font-size:12pt; "></div>
+<div id="tj18-2" style="position: absolute; top: 4740px; left:525px; font-size:12pt; "></div>
+<div id="tj18-2c" style="position: absolute; top: 4795px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj18-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-3b" style="position: absolute; top: 4740px; left:455px; font-size:12pt; "></div>
+<div id="tj18-3" style="position: absolute; top: 4740px; left:465px; font-size:12pt; "></div>
+<div id="tj18-3c" style="position: absolute; top: 4795px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj18-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-4b" style="position: absolute; top: 4740px; left:375px; font-size:12pt; "></div>
+<div id="tj18-4" style="position: absolute; top: 4740px; left:385px; font-size:12pt; "></div>
+<div id="tj18-4c" style="position: absolute; top: 4795px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!ふじみ野-上福岡>
+<div id="tj18-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj18-19" disabled / name="address" size="14" value=""　></div>
+<div id="tj18-19b" style="position: absolute; top: 4888px; left:515px; font-size:12pt; "></div>
+<div id="tj18-19e" style="position: absolute; top: 4888px; left:525px; font-size:12pt; "></div>
+<div id="tj18-19c" style="position: absolute; top: 4943px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj19-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj19-18" disabled / name="address" size="14" value=""　></div>
+<div id="tj19-18b" style="position: absolute; top: 4888px; left:455px; font-size:12pt; "></div>
+<div id="tj19-18e" style="position: absolute; top: 4888px; left:465px; font-size:12pt; "></div>
+<div id="tj19-18c" style="position: absolute; top: 4943px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div style="position: absolute; top: 5010px; left:280px; font-size:18pt"><p>上福岡</p></div>
+<div id="tj19-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj19-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj19-1b" style="position: absolute; top: 5010px; left:525px; font-size:12pt; "></div>
+<div id="tj19-1" style="position: absolute; top: 5010px; left:535px; font-size:12pt; "></div>
+<div id="tj19-1c" style="position: absolute; top: 5065px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj19-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj19-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj19-2b" style="position: absolute; top: 5010px; left:445px; font-size:12pt; "></div>
+<div id="tj19-2" style="position: absolute; top: 5010px; left:455px; font-size:12pt; "></div>
+<div id="tj19-2c" style="position: absolute; top: 5065px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 5080px; left:300px; font-size:12pt"><p>[SP]上福岡区分 ＞</p></div>
+<!上福岡-新河岸>
+<div id="tj19-20d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj19-20" disabled / name="address" size="14" value=""　></div>
+<div id="tj19-20b" style="position: absolute; top: 5115px; left:525px; font-size:12pt; "></div>
+<div id="tj19-20e" style="position: absolute; top: 5115px; left:535px; font-size:12pt; "></div>
+<div id="tj19-20c" style="position: absolute; top: 5170px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj20-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj20-19" disabled / name="address" size="14" value=""　></div>
+<div id="tj20-19b" style="position: absolute; top: 5115px; left:445px; font-size:12pt; "></div>
+<div id="tj20-19e" style="position: absolute; top: 5115px; left:455px; font-size:12pt; "></div>
+<div id="tj20-19c" style="position: absolute; top: 5170px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 5205px; left:280px; font-size:18pt"><p>新河岸</p></div>
+<div id="tj20-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj20-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj20-1b" style="position: absolute; top: 5205px; left:525px; font-size:12pt; "></div>
+<div id="tj20-1" style="position: absolute; top: 5205px; left:535px; font-size:12pt; "></div>
+<div id="tj20-1c" style="position: absolute; top: 5260px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj20-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj20-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj20-2b" style="position: absolute; top: 5205px; left:445px; font-size:12pt; "></div>
+<div id="tj20-2" style="position: absolute; top: 5205px; left:455px; font-size:12pt; "></div>
+<div id="tj20-2c" style="position: absolute; top: 5260px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!新河岸-川越>
+<div id="tj20-21d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj20-21" disabled / name="address" size="14" value=""　></div>
+<div id="tj20-21b" style="position: absolute; top: 5330px; left:515px; font-size:12pt; "></div>
+<div id="tj20-21e" style="position: absolute; top: 5330px; left:525px; font-size:12pt; "></div>
+<div id="tj20-21c" style="position: absolute; top: 5385px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj21-20d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj21-20" disabled / name="address" size="14" value=""　></div>
+<div id="tj21-20b" style="position: absolute; top: 5330px; left:455px; font-size:12pt; "></div>
+<div id="tj21-20e" style="position: absolute; top: 5330px; left:465px; font-size:12pt; "></div>
+<div id="tj21-20c" style="position: absolute; top: 5385px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 5420px; left:280px; font-size:18pt"><p>川　越</p></div>
+<div id="tj21-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj21-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj21-1b" style="position: absolute; top: 5420px; left:515px; font-size:12pt; "></div>
+<div id="tj21-1" style="position: absolute; top: 5420px; left:525px; font-size:12pt; "></div>
+<div id="tj21-1c" style="position: absolute; top: 5475px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj21-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj21-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj21-2b" style="position: absolute; top: 5420px; left:455px; font-size:12pt; "></div>
+<div id="tj21-2" style="position: absolute; top: 5420px; left:465px; font-size:12pt; "></div>
+<div id="tj21-2c" style="position: absolute; top: 5475px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<!川越-川越市>
+<div id="tj21-22d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj21-22" disabled / name="address" size="14" value=""　></div>
+<div id="tj21-22b" style="position: absolute; top: 5515px; left:515px; font-size:12pt; "></div>
+<div id="tj21-22e" style="position: absolute; top: 5515px; left:525px; font-size:12pt; "></div>
+<div id="tj21-22c" style="position: absolute; top: 5570px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj22-21d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-21" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-21b" style="position: absolute; top: 5515px; left:455px; font-size:12pt; "></div>
+<div id="tj22-21e" style="position: absolute; top: 5515px; left:465px; font-size:12pt; "></div>
+<div id="tj22-21c" style="position: absolute; top: 5570px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 5600px; left:320px; font-size:12pt"><p>[SS]川越変電 ＞</p></div>
+
+<div style="position: absolute; top: 5700px; left:260px; font-size:18pt"><p>川越市</p></div>
+<div style="position: absolute; top: 5740px; left:220px; color: #ff0000; font-size:10pt"><p>※実番線と異なります</p></div>
+<div id="tj22-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-1b" style="position: absolute; top: 5700px; left:595px; font-size:12pt; "></div>
+<div id="tj22-1" style="position: absolute; top: 5700px; left:605px; font-size:12pt; "></div>
+<div id="tj22-1c" style="position: absolute; top: 5755px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj22-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-2b" style="position: absolute; top: 5700px; left:515px; font-size:12pt; "></div>
+<div id="tj22-2" style="position: absolute; top: 5700px; left:525px; font-size:12pt; "></div>
+<div id="tj22-2c" style="position: absolute; top: 5755px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj22-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-3a" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-3b" style="position: absolute; top: 5700px; left:455px; font-size:12pt; "></div>
+<div id="tj22-3" style="position: absolute; top: 5700px; left:465px; font-size:12pt; "></div>
+<div id="tj22-3c" style="position: absolute; top: 5755px; left:455px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj22-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-4a" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-4b" style="position: absolute; top: 5700px; left:375px; font-size:12pt; "></div>
+<div id="tj22-4" style="position: absolute; top: 5700px; left:385px; font-size:12pt; "></div>
+<div id="tj22-4c" style="position: absolute; top: 5755px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<!川越市-霞ヶ関>
+<div id="tj22-23d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj22-23" disabled / name="address" size="14" value=""　></div>
+<div id="tj22-23b" style="position: absolute; top: 5880px; left:595px; font-size:12pt; "></div>
+<div id="tj22-23e" style="position: absolute; top: 5880px; left:605px; font-size:12pt; "></div>
+<div id="tj22-23c" style="position: absolute; top: 5935px; left:595px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj23-22d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj23-22" disabled / name="address" size="14" value=""　></div>
+<div id="tj23-22b" style="position: absolute; top: 5900px; left:375px; font-size:12pt; "></div>
+<div id="tj23-22e" style="position: absolute; top: 5900px; left:385px; font-size:12pt; "></div>
+<div id="tj23-22c" style="position: absolute; top: 5955px; left:375px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 6030px; left:280px; font-size:18pt"><p>霞ヶ関</p></div>
+<div id="tj23-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj23-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj23-1b" style="position: absolute; top: 6030px; left:525px; font-size:12pt; "></div>
+<div id="tj23-1" style="position: absolute; top: 6030px; left:535px; font-size:12pt; "></div>
+<div id="tj23-1c" style="position: absolute; top: 6085px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj23-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj23-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj23-2b" style="position: absolute; top: 6030px; left:445px; font-size:12pt; "></div>
+<div id="tj23-2" style="position: absolute; top: 6030px; left:455px; font-size:12pt; "></div>
+<div id="tj23-2c" style="position: absolute; top: 6085px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!霞ヶ関-鶴ヶ島>
+<div id="tj23-24d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj23-24" disabled / name="address" size="14" value=""　></div>
+<div id="tj23-24b" style="position: absolute; top: 6155px; left:515px; font-size:12pt; "></div>
+<div id="tj23-24e" style="position: absolute; top: 6155px; left:525px; font-size:12pt; "></div>
+<div id="tj23-24c" style="position: absolute; top: 6210px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj24-23d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj24-23" disabled / name="address" size="14" value=""　></div>
+<div id="tj24-23b" style="position: absolute; top: 6155px; left:455px; font-size:12pt; "></div>
+<div id="tj24-23e" style="position: absolute; top: 6155px; left:465px; font-size:12pt; "></div>
+<div id="tj24-23c" style="position: absolute; top: 6210px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 6245px; left:280px; font-size:18pt"><p>鶴ヶ島</p></div>
+<div id="tj24-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj24-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj24-1b" style="position: absolute; top: 6245px; left:515px; font-size:12pt; "></div>
+<div id="tj24-1" style="position: absolute; top: 6245px; left:525px; font-size:12pt; "></div>
+<div id="tj24-1c" style="position: absolute; top: 6300px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj24-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj24-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj24-2b" style="position: absolute; top: 6245px; left:455px; font-size:12pt; "></div>
+<div id="tj24-2" style="position: absolute; top: 6245px; left:465px; font-size:12pt; "></div>
+<div id="tj24-2c" style="position: absolute; top: 6300px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<!鶴ヶ島-若葉>
+<div id="tj24-25d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj24-25" disabled / name="address" size="14" value=""　></div>
+<div id="tj24-25b" style="position: absolute; top: 6340px; left:515px; font-size:12pt; "></div>
+<div id="tj24-25e" style="position: absolute; top: 6340px; left:525px; font-size:12pt; "></div>
+<div id="tj24-25c" style="position: absolute; top: 6395px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj25-24d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj25-24" disabled / name="address" size="14" value=""　></div>
+<div id="tj25-24b" style="position: absolute; top: 6340px; left:455px; font-size:12pt; "></div>
+<div id="tj25-24e" style="position: absolute; top: 6340px; left:465px; font-size:12pt; "></div>
+<div id="tj25-24c" style="position: absolute; top: 6395px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 6465px; left:280px; font-size:18pt"><p>若　葉</p></div>
+<div id="tj25-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj25-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj25-1b" style="position: absolute; top: 6465px; left:525px; font-size:12pt; "></div>
+<div id="tj25-1" style="position: absolute; top: 6465px; left:535px; font-size:12pt; "></div>
+<div id="tj25-1c" style="position: absolute; top: 6510px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj25-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj25-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj25-2b" style="position: absolute; top: 6465px; left:445px; font-size:12pt; "></div>
+<div id="tj25-2" style="position: absolute; top: 6465px; left:455px; font-size:12pt; "></div>
+<div id="tj25-2c" style="position: absolute; top: 6510px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 6540px; left:320px; font-size:12pt"><p>[SS]若葉変電 ＞</p></div>
+
+<!若葉-坂戸>
+<div id="tj25-26d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj25-26" disabled / name="address" size="14" value=""　></div>
+<div id="tj25-26b" style="position: absolute; top: 6560px; left:525px; font-size:12pt; "></div>
+<div id="tj25-26e" style="position: absolute; top: 6560px; left:535px; font-size:12pt; "></div>
+<div id="tj25-26c" style="position: absolute; top: 6615px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj26-25d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj26-25" disabled / name="address" size="14" value=""　></div>
+<div id="tj26-25b" style="position: absolute; top: 6560px; left:445px; font-size:12pt; "></div>
+<div id="tj26-25e" style="position: absolute; top: 6560px; left:455px; font-size:12pt; "></div>
+<div id="tj26-25c" style="position: absolute; top: 6615px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 6730px; left:280px; font-size:18pt"><p>坂　戸</p></div>
+<div id="tj26-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj26-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj26-1b" style="position: absolute; top: 6730px; left:525px; font-size:12pt; "></div>
+<div id="tj26-1" style="position: absolute; top: 6730px; left:535px; font-size:12pt; "></div>
+<div id="tj26-1c" style="position: absolute; top: 6785px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj26-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj26-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj26-2b" style="position: absolute; top: 6730px; left:445px; font-size:12pt; "></div>
+<div id="tj26-2" style="position: absolute; top: 6730px; left:455px; font-size:12pt; "></div>
+<div id="tj26-2c" style="position: absolute; top: 6785px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!坂戸-北坂戸>
+<div id="tj26-27d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj26-27" disabled / name="address" size="14" value=""　></div>
+<div id="tj26-27b" style="position: absolute; top: 6900px; left:525px; font-size:12pt; "></div>
+<div id="tj26-27e" style="position: absolute; top: 6900px; left:535px; font-size:12pt; "></div>
+<div id="tj26-27c" style="position: absolute; top: 6955px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj27-26d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj27-26" disabled / name="address" size="14" value=""　></div>
+<div id="tj27-26b" style="position: absolute; top: 6910px; left:445px; font-size:12pt; "></div>
+<div id="tj27-26e" style="position: absolute; top: 6910px; left:455px; font-size:12pt; "></div>
+<div id="tj27-26c" style="position: absolute; top: 6965px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 7000px; left:280px; font-size:18pt"><p>北坂戸</p></div>
+<div id="tj27-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj27-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj27-1b" style="position: absolute; top: 7000px; left:525px; font-size:12pt; "></div>
+<div id="tj27-1" style="position: absolute; top: 7000px; left:535px; font-size:12pt; "></div>
+<div id="tj27-1c" style="position: absolute; top: 7055px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj27-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj27-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj27-2b" style="position: absolute; top: 7000px; left:445px; font-size:12pt; "></div>
+<div id="tj27-2" style="position: absolute; top: 7000px; left:455px; font-size:12pt; "></div>
+<div id="tj27-2c" style="position: absolute; top: 7055px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!北坂戸-高坂>
+<div id="tj27-28d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj27-28" disabled / name="address" size="14" value=""　></div>
+<div id="tj27-28b" style="position: absolute; top: 7095px; left:525px; font-size:12pt; "></div>
+<div id="tj27-28e" style="position: absolute; top: 7095px; left:535px; font-size:12pt; "></div>
+<div id="tj27-28c" style="position: absolute; top: 7150px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj28-27d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj28-27" disabled / name="address" size="14" value=""　></div>
+<div id="tj28-27b" style="position: absolute; top: 7105px; left:445px; font-size:12pt; "></div>
+<div id="tj28-27e" style="position: absolute; top: 7105px; left:455px; font-size:12pt; "></div>
+<div id="tj28-27c" style="position: absolute; top: 7160px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 7200px; left:320px; font-size:12pt"><p>[SS]高坂変電 ＞</p></div>
+
+<div style="position: absolute; top: 7270px; left:280px; font-size:18pt"><p>高　坂</p></div>
+<div id="tj28-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj28-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj28-1b" style="position: absolute; top: 7275px; left:525px; font-size:12pt; "></div>
+<div id="tj28-1" style="position: absolute; top: 7275px; left:535px; font-size:12pt; "></div>
+<div id="tj28-1c" style="position: absolute; top: 7330px; left:525px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj28-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj28-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj28-2b" style="position: absolute; top: 7275px; left:445px; font-size:12pt; "></div>
+<div id="tj28-2" style="position: absolute; top: 7275px; left:455px; font-size:12pt; "></div>
+<div id="tj28-2c" style="position: absolute; top: 7330px; left:445px; font-size:12pt; color:#FF0000; "></div>
+
+<!高坂-東松山>
+<div id="tj28-29d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj28-29" disabled / name="address" size="14" value=""　></div>
+<div id="tj28-29b" style="position: absolute; top: 7433px; left:515px; font-size:12pt; "></div>
+<div id="tj28-29e" style="position: absolute; top: 7433px; left:525px; font-size:12pt; "></div>
+<div id="tj28-29c" style="position: absolute; top: 7488px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj29-28d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj29-28" disabled / name="address" size="14" value=""　></div>
+<div id="tj29-28b" style="position: absolute; top: 7433px; left:455px; font-size:12pt; "></div>
+<div id="tj29-28e" style="position: absolute; top: 7433px; left:465px; font-size:12pt; "></div>
+<div id="tj29-28c" style="position: absolute; top: 7488px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 7520px; left:280px; font-size:18pt"><p>東松山</p></div>
+<div id="tj29-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj29-1a" disabled / name="address" size="14" value=""　></div>
+<div id="tj29-1b" style="position: absolute; top: 7520px; left:515px; font-size:12pt; "></div>
+<div id="tj29-1" style="position: absolute; top: 7520px; left:525px; font-size:12pt; "></div>
+<div id="tj29-1c" style="position: absolute; top: 7575px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj29-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj29-2a" disabled / name="address" size="14" value=""　></div>
+<div id="tj29-2b" style="position: absolute; top: 7520px; left:455px; font-size:12pt; "></div>
+<div id="tj29-2" style="position: absolute; top: 7520px; left:465px; font-size:12pt; "></div>
+<div id="tj29-2c" style="position: absolute; top: 7575px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<!東松山-森林公園>
+<div id="tj29-30d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj29-30" disabled / name="address" size="14" value=""　></div>
+<div id="tj29-30b" style="position: absolute; top: 7615px; left:515px; font-size:12pt; "></div>
+<div id="tj29-30e" style="position: absolute; top: 7615px; left:525px; font-size:12pt; "></div>
+<div id="tj29-30c" style="position: absolute; top: 7670px; left:515px; font-size:12pt; color:#FF0000; "></div>
+<div id="tj30-29d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "tj30-29" disabled / name="address" size="14" value=""　></div>
+<div id="tj30-29b" style="position: absolute; top: 7615px; left:455px; font-size:12pt; "></div>
+<div id="tj30-29e" style="position: absolute; top: 7615px; left:465px; font-size:12pt; "></div>
+<div id="tj30-29c" style="position: absolute; top: 7670px; left:455px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1000px; left:270px; font-size:18pt"><p>目　白</p></div>
+<div id="jy30-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy30-1a" disabled / name="address" size="14" value=""　></div>
+<div id="jy30-1b" style="position: absolute; top: 1000px; left:120px; font-size:12pt; "></div>
+<div id="jy30-1" style="position: absolute; top: 1000px; left:130px; font-size:12pt; "></div>
+<div id="jy30-1c" style="position: absolute; top: 1045px; left:120px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy30-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy30-2a" disabled / name="address" size="14" value=""　></div>
+<div id="jy30-2b" style="position: absolute; top: 1000px; left:200px; font-size:12pt; "></div>
+<div id="jy30-2" style="position: absolute; top: 1000px; left:210px; font-size:12pt; "></div>
+<div id="jy30-2c" style="position: absolute; top: 1045px; left:200px; font-size:12pt; color:#FF0000; "></div>
+
+<!目白-池袋>
+<div id="jy30-01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy30-01" disabled / name="address" size="14" value=""　></div>
+<div id="jy30-01b" style="position: absolute; top: 880px; left:130px; font-size:12pt; "><br/></div>
+<div id="jy30-01e" style="position: absolute; top: 880px; left:140px; font-size:12pt; "></div>
+<div id="jy30-01c" style="position: absolute; top: 925px; left:130px; font-size:12pt; color:#FF0000; "></div>
+<div id="jy01-30d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "jy01-30" disabled / name="address" size="14" value=""　></div>
+<div id="jy01-30b" style="position: absolute; top: 880px; left:190px; font-size:12pt; "><br/></div>
+<div id="jy01-30e" style="position: absolute; top: 880px; left:200px; font-size:12pt; "></div>
+<div id="jy01-30c" style="position: absolute; top: 925px; left:190px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div style="position: absolute; top: 8000px; left:1100px; font-size:18pt"><p>　</p></div>
+
+</nobr>
+</font>
+
+<script type="module" >
+
+var unjo1 = null ;
+
+
+
+
+
+
+	
+if ( localStorage.getItem( 'bajon' ) >= 200 ){
+} else {
+localStorage.clear();
+localStorage.setItem( 'bajon', 200 );
+}
+
+
+///////////////////////////////ここからＪＲ線
+
+var request = new XMLHttpRequest();
+request.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:JR-East&acl:consumerKey=wizrymexdtbv1gh681zdmx5twvcfnanpmwoc5qu6iuzwunny8c4v0c5q4c1hm7r0", true);
+request.responseType = "text";
+
+request.onload = () => {
+  if (request.readyState === request.DONE) {
+    if (request.status === 200) {
+var data = JSON.parse(request.responseText.replaceAll("odpt:","odpt"));
+console.log(data);
+//在線情報の処理
+      let info = '';
+      let len = '';
+
+      let kind = '';
+      let kind2 = '';
+      let kind3 = '';
+      let unban = '';
+      let unban1 = '';
+      let des = '';
+      let des2 = '';
+      let stid = '';
+      let scid = '';
+      let trid = '';
+      let sha = '';
+      let hensei = '';
+      let delay = '';
+      let line = '';
+      let cars = '';
+      let dai = 0;
+      let n = 0;
+      let q = 0;
+      let n1 = 0;
+      let p = 5;
+      let p1 = 250;
+      let wakoshi = '';
+
+
+let now = Math.floor(Date.now() / 60000) ;
+	var F  = {};
+
+      len = JSON.stringify(data.length) ;
+      let nameText = document.getElementById('ty01-3a');
+
+ty99.value = "表示試験" ;
+
+var requesta = {};
+var dataa = {};
+
+for ( n = len - 1 ; n > -1; n--) {
+
+dai = 0;
+
+
+//種別設定
+      kind= JSON.stringify(data[n].odpttrainType); 
+	switch (kind) {
+case '"odpt.TrainType:JR-East.Local"':
+	kind = "";
+	kind3 = "";
+	break;
+case '"odpt.TrainType:JR-East.Rapid"':
+	kind = "快";
+	kind3 = "快";
+	break;
+case '"odpt.TrainType:Tobu.RapidExpress"':
+	kind = "快";
+	kind3 = "快";
+	break;
+case '"odpt.TrainType:Tobu.SemiExpress"':
+	kind = "準";
+	kind3 = "準";
+	break;
+case '"odpt.TrainType:Tobu.TJ-Liner"':
+	kind = "ラ";
+	kind3 = "ラ";
+	break;
+case '"odpt.TrainType:Tobu.KawagoeLimitedExpress"':
+	kind = "川";
+	kind3 = "川";
+	break;
+case '"回"':
+	kind = "回";
+	kind3 = "回";
+	break;
+case 'null':
+	kind = "　";
+	kind3 = "　";
+	break;
+}
+
+      unban1 = JSON.stringify(data[n].odpttrainNumber).replaceAll('"','') ;
+　　　unban = unban1 ;
+
+//列番設定
+if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  ){
+	unban = unban.substr ( 1 )
+}
+
+
+//行先設定
+      des= JSON.stringify(data[n].odptdestinationStation) ;
+	switch (des) {
+case '["odpt.Station:JR-East.Yamanote.Osaki"]':
+	des = "―";	
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.Omiya"]':
+	des = "宮";
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.Ofuna"]':
+	des = "船";
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.Kamata"]':
+	des = "蒲";
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.Isogo"]':
+	des = "磯";
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.MinamiUrawa"]':
+	des = "南";
+	break;
+case '["odpt.Station:JR-East.KeihinTohokuNegishi.Sakuragicho"]':
+	des = "桜";
+	break;
+case '["odpt.Station:Tobu.Tojo.Sakado"]':
+	des = "坂";
+	break;
+case '["odpt.Station:Tobu.Tojo.Takasaka"]':
+	des = "高";
+	break;
+case '["odpt.Station:Tobu.Tojo.ShinrinKoen"]':
+	des = "森";
+	break;
+case '["odpt.Station:Tobu.Tojo.Ogawamachi"]':
+	des = "町";
+	break;
+case '["odpt.Station:Tobu.Tojo.Yorii"]':
+	des = "寄";
+	break;
+case '["odpt.Station:TokyoMetro.Yurakucho.ShinKiba"]':
+	des = "木";
+	break;
+case '["odpt.Station:TokyoMetro.Yurakucho.Ikebukuro"]':
+	des = "袋";
+	break;
+case '["odpt.Station:TokyoMetro.Fukutoshin.Shibuya"]':
+	des = "渋";
+	break;
+case '["odpt.Station:Minatomirai.Minatomirai.MotomachiChukagai"]':
+	des = "元";
+	break;
+case '["odpt.Station:Tokyu.Toyoko.MusashiKosugi"]':
+	des = "武";
+	break;
+case '["odpt.Station:Tokyu.Toyoko.Kikuna"]':
+	des = "菊";
+	break;
+case '["odpt.Station:Tokyu.Toyoko.Yokohama"]':
+	des = "横";
+	break;
+case '["odpt.Station:Sotetsu.Izumino.Shonandai"]':
+	des = "湘";
+	break;
+case '["odpt.Station:Sotetsu.SotetsuMain.Ebina"]':
+	des = "海";
+	break;
+case '0':
+	des = "―";
+	break;
+}
+      
+
+
+       stid= JSON.stringify(data[n].odptfromStation) ;
+      scid= JSON.stringify(data[n].odpttoStation) ;
+      trid= JSON.stringify(data[n].odptrailDirection) ;
+      delay= JSON.stringify(data[n].odptdelay) ;
+	delay = delay / 60 ;
+      cars= "8" ;
+
+if ( unban.length < 5 ){
+	unban = '&nbsp;' + unban ;
+} else {
+}
+
+
+//遅れ
+if ( delay == "0"){
+ delay = "　00" ;
+ unban = unban + '&nbsp;'
+} else if ( delay < 10 ) {
+ delay = "　 " + delay + '&nbsp;' ;
+} else {
+ delay = "　" + delay　+ '&nbsp;';
+}
+
+     
+
+	nameText = 0;
+
+	let date = new Date()  ;
+	date = ('0' + (date.getMonth() + 1)).slice(-2) + '月' +('0' + date.getDate()).slice(-2) + '日 ' +  ('0' + date.getHours()).slice(-2) + '時' + ('0' + date.getMinutes()).slice(-2) + '分' + ('0' + date.getSeconds()).slice(-2) + '秒現在';
+	
+//更新時刻表示
+	document.getElementById("time").innerHTML= date;
+
+
+	var target;
+	var doc0= document.getElementById("ty99");  
+	var doc1= document.getElementById("ty99");
+	var doc2= document.getElementById("ty99");
+
+switch (stid){
+
+case ('"odpt.Station:JR-East.Yamanote.Ikebukuro"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy01-2a');
+		target = document.getElementById('jy01-2ad');
+		doc2= document.getElementById("jy01-2"); 
+		doc0= document.getElementById("jy01-2b");  
+		doc1= document.getElementById("jy01-2c"); 
+	} else {
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy01-3a');
+		target = document.getElementById('jy01-3ad');
+		doc2= document.getElementById("jy01-3"); 
+		doc0= document.getElementById("jy01-3b");  
+		doc1= document.getElementById("jy01-3c"); 
+	}
+
+		 
+	break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Otsuka"' ):
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy01-02');
+		target = document.getElementById('jy01-02d');
+		doc2= document.getElementById("jy01-02e"); 
+		doc0= document.getElementById("jy01-02b");  
+		doc1= document.getElementById("jy01-02c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Mejiro"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy01-30');
+		target = document.getElementById('jy01-30d');
+		doc2= document.getElementById("jy01-30e"); 
+		doc0= document.getElementById("jy01-30b");  
+		doc1= document.getElementById("jy01-30c");  
+        break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+break ;
+
+
+case ( '"odpt.Station:JR-East.Yamanote.Otsuka"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy02-1a');
+		target = document.getElementById('jy02-1ad');
+		doc2= document.getElementById("jy02-1"); 
+		doc0= document.getElementById("jy02-1b");  
+		doc1= document.getElementById("jy02-1c"); 
+	} else {
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy02-2a');
+		target = document.getElementById('jy02-2ad');
+		doc2= document.getElementById("jy02-2"); 
+		doc0= document.getElementById("jy02-2b");  
+		doc1= document.getElementById("jy02-2c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Ikebukuro"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy02-01');
+		target = document.getElementById('jy02-01d');
+		doc2= document.getElementById("jy02-01e"); 
+		doc0= document.getElementById("jy02-01b");  
+		doc1= document.getElementById("jy02-01c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Sugamo"' ):
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy02-03');
+		target = document.getElementById('jy02-03d');
+		doc2= document.getElementById("jy02-03e"); 
+		doc0= document.getElementById("jy02-03b");  
+		doc1= document.getElementById("jy02-03c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.Yamanote.Sugamo"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy03-1a');
+		target = document.getElementById('jy03-1ad');
+		doc2= document.getElementById("jy03-1"); 
+		doc0= document.getElementById("jy03-1b");  
+		doc1= document.getElementById("jy03-1c"); 
+	} else {
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy03-2a');
+		target = document.getElementById('jy03-2ad');
+		doc2= document.getElementById("jy03-2"); 
+		doc0= document.getElementById("jy03-2b");  
+		doc1= document.getElementById("jy03-2c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Otsuka"' ):
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy03-02');
+		target = document.getElementById('jy03-02d');
+		doc2= document.getElementById("jy03-02e"); 
+		doc0= document.getElementById("jy03-02b");  
+		doc1= document.getElementById("jy03-02c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Komagome"' ):
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy03-04');
+		target = document.getElementById('jy03-04d');
+		doc2= document.getElementById("jy03-04e"); 
+		doc0= document.getElementById("jy03-04b");  
+		doc1= document.getElementById("jy03-04c");  
+        break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:JR-East.Yamanote.Komagome"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy04-1a');
+		target = document.getElementById('jy04-1ad');
+		doc2= document.getElementById("jy04-1"); 
+		doc0= document.getElementById("jy04-1b");  
+		doc1= document.getElementById("jy04-1c"); 
+	} else {
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy04-2a');
+		target = document.getElementById('jy04-2ad');
+		doc2= document.getElementById("jy04-2"); 
+		doc0= document.getElementById("jy04-2b");  
+		doc1= document.getElementById("jy04-2c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Sugamo"' ):
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy04-03');
+		target = document.getElementById('jy04-03d');
+		doc2= document.getElementById("jy04-03e"); 
+		doc0= document.getElementById("jy04-03b");  
+		doc1= document.getElementById("jy04-03c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Tabata"' ):
+		if ( des == "―"){
+		des = "→";
+		}
+		nameText = document.getElementById('jy04-05');
+		target = document.getElementById('jy04-05d');
+		doc2= document.getElementById("jy04-05e"); 
+		doc0= document.getElementById("jy04-05b");  
+		doc1= document.getElementById("jy04-05c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.Yamanote.Tabata"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy05-2a');
+		target = document.getElementById('jy05-2ad');
+		doc2= document.getElementById("jy05-2"); 
+		doc0= document.getElementById("jy05-2b");  
+		doc1= document.getElementById("jy05-2c"); 
+	} else {
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy05-3a');
+		target = document.getElementById('jy05-3ad');
+		doc2= document.getElementById("jy05-3"); 
+		doc0= document.getElementById("jy05-3b");  
+		doc1= document.getElementById("jy05-3c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Komagome"' ):
+		if ( des == "―"){
+		des = "←";
+		}
+		nameText = document.getElementById('jy05-04');
+		target = document.getElementById('jy05-04d');
+		doc2= document.getElementById("jy05-04e"); 
+		doc0= document.getElementById("jy05-04b");  
+		doc1= document.getElementById("jy05-04c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.NishiNippori"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy05-06');
+		target = document.getElementById('jy05-06d');
+		doc2= document.getElementById("jy05-06e"); 
+		doc0= document.getElementById("jy05-06b");  
+		doc1= document.getElementById("jy05-06c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Tabata"' ): //京浜
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Southbound"' ) {
+		nameText = document.getElementById('jk05-1a');
+		target = document.getElementById('jk05-1ad');
+		doc2= document.getElementById("jk05-1"); 
+		doc0= document.getElementById("jk05-1b");  
+		doc1= document.getElementById("jk05-1c"); 
+	} else {
+		nameText = document.getElementById('jk05-4a');
+		target = document.getElementById('jk05-4ad');
+		doc2= document.getElementById("jk05-4"); 
+		doc0= document.getElementById("jk05-4b");  
+		doc1= document.getElementById("jk05-4c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.KamiNakazato"' ):
+		nameText = document.getElementById('jk05-04');
+		target = document.getElementById('jk05-04d');
+		doc2= document.getElementById("jk05-04e"); 
+		doc0= document.getElementById("jk05-04b");  
+		doc1= document.getElementById("jk05-04c");
+
+
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.NishiNippori"' ):
+		nameText = document.getElementById('jk05-06');
+		target = document.getElementById('jk05-06d');
+		doc2= document.getElementById("jk05-06e"); 
+		doc0= document.getElementById("jk05-06b");  
+		doc1= document.getElementById("jk05-06c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:JR-East.Yamanote.NishiNippori"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy06-2a');
+		target = document.getElementById('jy06-2ad');
+		doc2= document.getElementById("jy06-2"); 
+		doc0= document.getElementById("jy06-2b");  
+		doc1= document.getElementById("jy06-2c"); 
+	} else {
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy06-3a');
+		target = document.getElementById('jy06-3ad');
+		doc2= document.getElementById("jy06-3"); 
+		doc0= document.getElementById("jy06-3b");  
+		doc1= document.getElementById("jy06-3c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Tabata"' ):
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy06-05');
+		target = document.getElementById('jy06-05d');
+		doc2= document.getElementById("jy06-05e"); 
+		doc0= document.getElementById("jy06-05b");  
+		doc1= document.getElementById("jy06-05c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Nippori"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy06-07');
+		target = document.getElementById('jy06-07d');
+		doc2= document.getElementById("jy06-07e"); 
+		doc0= document.getElementById("jy06-07b");  
+		doc1= document.getElementById("jy06-07c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.NishiNippori"' ): //京浜
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Southbound"' ) {
+		nameText = document.getElementById('jk06-1a');
+		target = document.getElementById('jk06-1ad');
+		doc2= document.getElementById("jk06-1"); 
+		doc0= document.getElementById("jk06-1b");  
+		doc1= document.getElementById("jk06-1c"); 
+	} else {
+		nameText = document.getElementById('jk06-4a');
+		target = document.getElementById('jk06-4ad');
+		doc2= document.getElementById("jk06-4"); 
+		doc0= document.getElementById("jk06-4b");  
+		doc1= document.getElementById("jk06-4c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Tabata"' ):
+		nameText = document.getElementById('jk06-05');
+		target = document.getElementById('jk06-05d');
+		doc2= document.getElementById("jk06-05e"); 
+		doc0= document.getElementById("jk06-05b");  
+		doc1= document.getElementById("jk06-05c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Nippori"' ):
+		 nameText = document.getElementById('jk06-07');
+		target = document.getElementById('jk06-07d');
+		doc2= document.getElementById("jk06-07e"); 
+		doc0= document.getElementById("jk06-07b");  
+		doc1= document.getElementById("jk06-07c"); 
+	nameText = 0;
+
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:JR-East.Yamanote.Nippori"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy07-2a');
+		target = document.getElementById('jy07-2ad');
+		doc2= document.getElementById("jy07-2"); 
+		doc0= document.getElementById("jy07-2b");  
+		doc1= document.getElementById("jy07-2c"); 
+	} else {
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy07-3a');
+		target = document.getElementById('jy07-3ad');
+		doc2= document.getElementById("jy07-3"); 
+		doc0= document.getElementById("jy07-3b");  
+		doc1= document.getElementById("jy07-3c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.NishiNippori"' ):
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy07-06');
+		target = document.getElementById('jy07-06d');
+		doc2= document.getElementById("jy07-06e"); 
+		doc0= document.getElementById("jy07-06b");  
+		doc1= document.getElementById("jy07-06c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Uguisudani"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy07-08');
+		target = document.getElementById('jy07-08d');
+		doc2= document.getElementById("jy07-08e"); 
+		doc0= document.getElementById("jy07-08b");  
+		doc1= document.getElementById("jy07-08c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Nippori"' ): //京浜
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Southbound"' ) {
+		nameText = document.getElementById('jk07-1a');
+		target = document.getElementById('jk07-1ad');
+		doc2= document.getElementById("jk07-1"); 
+		doc0= document.getElementById("jk07-1b");  
+		doc1= document.getElementById("jk07-1c"); 
+	} else {
+		nameText = document.getElementById('jk07-4a');
+		target = document.getElementById('jk07-4ad');
+		doc2= document.getElementById("jk07-4"); 
+		doc0= document.getElementById("jk07-4b");  
+		doc1= document.getElementById("jk07-4c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.NishiNippori"' ):
+		nameText = document.getElementById('jk07-06');
+		target = document.getElementById('jk07-06d');
+		doc2= document.getElementById("jk07-06e"); 
+		doc0= document.getElementById("jk07-06b");  
+		doc1= document.getElementById("jk07-06c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Uguisudani"' ):
+		nameText = document.getElementById('jk07-08');
+		target = document.getElementById('jk07-08d');
+		doc2= document.getElementById("jk07-08e"); 
+		doc0= document.getElementById("jk07-08b");  
+		doc1= document.getElementById("jk07-08c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.Yamanote.Uguisudani"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy08-2a');
+		target = document.getElementById('jy08-2ad');
+		doc2= document.getElementById("jy08-2"); 
+		doc0= document.getElementById("jy08-2b");  
+		doc1= document.getElementById("jy08-2c"); 
+	} else {
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy08-3a');
+		target = document.getElementById('jy08-3ad');
+		doc2= document.getElementById("jy08-3"); 
+		doc0= document.getElementById("jy08-3b");  
+		doc1= document.getElementById("jy08-3c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Nippori"' ):
+		if ( des == "―"){
+		des = "↑";
+		}
+		nameText = document.getElementById('jy08-07');
+		target = document.getElementById('jy08-07d');
+		doc2= document.getElementById("jy08-07e"); 
+		doc0= document.getElementById("jy08-07b");  
+		doc1= document.getElementById("jy08-07c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Ueno"' ):
+		if ( des == "―"){
+		des = "↓";
+		}
+		nameText = document.getElementById('jy08-09');
+		target = document.getElementById('jy08-09d');
+		doc2= document.getElementById("jy08-09e"); 
+		doc0= document.getElementById("jy08-09b");  
+		doc1= document.getElementById("jy08-09c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Uguisudani"' ): //京浜
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Southbound"' ) {
+		nameText = document.getElementById('jk08-1a');
+		target = document.getElementById('jk08-1ad');
+		doc2= document.getElementById("jk08-1"); 
+		doc0= document.getElementById("jk08-1b");  
+		doc1= document.getElementById("jk08-1c"); 
+	} else {
+		nameText = document.getElementById('jk08-4a');
+		target = document.getElementById('jk08-4ad');
+		doc2= document.getElementById("jk08-4"); 
+		doc0= document.getElementById("jk08-4b");  
+		doc1= document.getElementById("jk08-4c"); 
+	}
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Nippori"' ):
+		nameText = document.getElementById('jk08-07');
+		target = document.getElementById('jk08-07d');
+		doc2= document.getElementById("jk08-07e"); 
+		doc0= document.getElementById("jk08-07b");  
+		doc1= document.getElementById("jk08-07c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.KeihinTohokuNegishi.Ueno"' ):
+		nameText = document.getElementById('jk08-09');
+		target = document.getElementById('jk08-09d');
+		doc2= document.getElementById("jk08-09e"); 
+		doc0= document.getElementById("jk08-09b");  
+		doc1= document.getElementById("jk08-09c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:JR-East.Yamanote.Ueno"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
+		nameText = document.getElementById('jy09-2a');
+		target = document.getElementById('jy09-2ad');
+		doc2= document.getElementById("jy09-2"); 
+		doc0= document.getElementById("jy09-2b");  
+		doc1= document.getElementById("jy09-2c"); 
+	} else {
+		nameText = document.getElementById('jy09-3a');
+		target = document.getElementById('jy09-3ad');
+		doc2= document.getElementById("jy09-3"); 
+		doc0= document.getElementById("jy09-3b");  
+		doc1= document.getElementById("jy09-3c"); 
+	}
+        break ;
+
+	
+	case ( '"odpt.Station:JR-East.Yamanote.Uguisudani"' ):
+		nameText = document.getElementById('jy09-08');
+		target = document.getElementById('jy09-08d');
+		doc2= document.getElementById("jy09-08e"); 
+		doc0= document.getElementById("jy09-08b");  
+		doc1= document.getElementById("jy09-08c");  
+        break ;
+
+	case ( '"odpt.Station:JR-East.Yamanote.Okachimachi"' ):
+		nameText = document.getElementById('jy09-10');
+		target = document.getElementById('jy09-10d');
+		doc2= document.getElementById("jy09-10e"); 
+		doc0= document.getElementById("jy09-10b");  
+		doc1= document.getElementById("jy09-10c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:Tobu.Tojo.Narimasu"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if ( unban.substr ( 1,1) == '7' ||  unban.substr ( 1,1) == '8'  ){
+		nameText = document.getElementById('tj10-1a');
+		target = document.getElementById('tj10-1ad');
+		doc2= document.getElementById("tj10-1"); 
+		doc0= document.getElementById("tj10-1b");  
+		doc1= document.getElementById("tj10-1c"); 
+		} else {
+		nameText = document.getElementById('tj10-2a');
+	  if ( nameText.value == "" ) {
+		target = document.getElementById('tj10-2ad');
+		doc2= document.getElementById("tj10-2"); 
+		doc0= document.getElementById("tj10-2b");  
+		doc1= document.getElementById("tj10-2c"); 
+	  } else {
+		nameText = document.getElementById('tj10-1a');
+		target = document.getElementById('tj10-1ad');
+		doc2= document.getElementById("tj10-1"); 
+		doc0= document.getElementById("tj10-1b");  
+		doc1= document.getElementById("tj10-1c"); 
+	  }
+		}
+	} else {
+		if ( unban.substr ( 1,1) == '7' ||  unban.substr ( 1,1) == '8'  ){
+		nameText = document.getElementById('tj10-3a');
+		target = document.getElementById('tj10-3ad');
+		doc2= document.getElementById("tj10-3"); 
+		doc0= document.getElementById("tj10-3b");  
+		doc1= document.getElementById("tj10-3c"); 
+		} else {
+		nameText = document.getElementById('tj10-4a');
+	  if ( nameText.value == "" ) {
+		target = document.getElementById('tj10-4ad');
+		doc2= document.getElementById("tj10-4"); 
+		doc0= document.getElementById("tj10-4b");  
+		doc1= document.getElementById("tj10-4c"); 
+	  } else {
+		nameText = document.getElementById('tj10-3a');
+		target = document.getElementById('tj10-3ad');
+		doc2= document.getElementById("tj10-3"); 
+		doc0= document.getElementById("tj10-3b");  
+		doc1= document.getElementById("tj10-3c"); 
+	  }
+		}
+	}
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.ShimoAkatsuka"' ):
+		nameText = document.getElementById('tj10-09');
+		target = document.getElementById('tj10-09d');
+		doc2= document.getElementById("tj10-09e"); 
+		doc0= document.getElementById("tj10-09b");  
+		doc1= document.getElementById("tj10-09c");  
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Wakoshi"' ):
+		nameText = document.getElementById('tj10-11');
+		target = document.getElementById('tj10-11d');
+		doc2= document.getElementById("tj10-11e"); 
+		doc0= document.getElementById("tj10-11b");  
+		doc1= document.getElementById("tj10-11c");  
+        break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:Tobu.Tojo.Wakoshi"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  ){
+		nameText = document.getElementById('tj11-2a');
+		target = document.getElementById('tj11-2ad');
+		doc2= document.getElementById("tj11-2"); 
+		doc0= document.getElementById("tj11-2b");  
+		doc1= document.getElementById("tj11-2c"); 
+		} else {
+		nameText = document.getElementById('tj11-1a');
+		target = document.getElementById('tj11-1ad');
+		doc2= document.getElementById("tj11-1"); 
+		doc0= document.getElementById("tj11-1b");  
+		doc1= document.getElementById("tj11-1c"); 
+		}
+	} else {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'   ){
+		nameText = document.getElementById('tj11-3a');
+		target = document.getElementById('tj11-3ad');
+		doc2= document.getElementById("tj11-3"); 
+		doc0= document.getElementById("tj11-3b");  
+		doc1= document.getElementById("tj11-3c"); 
+		wakoshi =   '　' + '&nbsp;' + des + '<br/>' +  '　' + unban.substr ( -3,3) +　 '<br/>' +  '<br/>' +  '　　' ;
+		} else {
+		nameText = document.getElementById('tj11-4a');
+		target = document.getElementById('tj11-4ad');
+		doc2= document.getElementById("tj11-4"); 
+		doc0= document.getElementById("tj11-4b");  
+		doc1= document.getElementById("tj11-4c"); 
+		}
+	}
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Asaka"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju11-12');
+		target = document.getElementById('tju11-12d');
+		doc2= document.getElementById("tju11-12e"); 
+		doc0= document.getElementById("tju11-12b");  
+		doc1= document.getElementById("tju11-12c"); 
+		} else {
+		nameText = document.getElementById('tj11-12');
+		target = document.getElementById('tj11-12d');
+		doc2= document.getElementById("tj11-12e"); 
+		doc0= document.getElementById("tj11-12b");  
+		doc1= document.getElementById("tj11-12c"); 
+		} 
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Narimasu"' ):
+		nameText = document.getElementById('tj11-10');
+		target = document.getElementById('tj11-10d');
+		doc2= document.getElementById("tj11-10e"); 
+		doc0= document.getElementById("tj11-10b");  
+		doc1= document.getElementById("tj11-10c");  
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ( '"odpt.Station:Tobu.Tojo.Asaka"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tj12-2a');
+		target = document.getElementById('tj12-2ad');
+		doc2= document.getElementById("tj12-2"); 
+		doc0= document.getElementById("tj12-2b");  
+		doc1= document.getElementById("tj12-2c"); 
+		} else {
+		nameText = document.getElementById('tj12-1a');
+		target = document.getElementById('tj12-1ad');
+		doc2= document.getElementById("tj12-1"); 
+		doc0= document.getElementById("tj12-1b");  
+		doc1= document.getElementById("tj12-1c"); 
+		}
+	} else {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'   || kind == '普' ){
+		nameText = document.getElementById('tj12-3a');
+		target = document.getElementById('tj12-3ad');
+		doc2= document.getElementById("tj12-3"); 
+		doc0= document.getElementById("tj12-3b");  
+		doc1= document.getElementById("tj12-3c"); 
+		} else {
+		nameText = document.getElementById('tj12-4a');
+		target = document.getElementById('tj12-4ad');
+		doc2= document.getElementById("tj12-4"); 
+		doc0= document.getElementById("tj12-4b");  
+		doc1= document.getElementById("tj12-4c"); 
+		}
+	}
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Wakoshi"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju12-11');
+		target = document.getElementById('tju12-11d');
+		doc2= document.getElementById("tju12-11e"); 
+		doc0= document.getElementById("tju12-11b");  
+		doc1= document.getElementById("tju12-11c"); 
+		} else {
+		nameText = document.getElementById('tj12-11');
+		target = document.getElementById('tj12-11d');
+		doc2= document.getElementById("tj12-11e"); 
+		doc0= document.getElementById("tj12-11b");  
+		doc1= document.getElementById("tj12-11c"); 
+		} 
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Asakadai"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju12-13');
+		target = document.getElementById('tju12-13d');
+		doc2= document.getElementById("tju12-13e"); 
+		doc0= document.getElementById("tju12-13b");  
+		doc1= document.getElementById("tju12-13c"); 
+		} else {
+		nameText = document.getElementById('tj12-13');
+		target = document.getElementById('tj12-13d');
+		doc2= document.getElementById("tj12-13e"); 
+		doc0= document.getElementById("tj12-13b");  
+		doc1= document.getElementById("tj12-13c"); 
+		} 
+        break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ( '"odpt.Station:Tobu.Tojo.Asakadai"' ):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tj13-2a');
+		target = document.getElementById('tj13-2ad');
+		doc2= document.getElementById("tj13-2"); 
+		doc0= document.getElementById("tj13-2b");  
+		doc1= document.getElementById("tj13-2c"); 
+		} else {
+		nameText = document.getElementById('tj13-1a');
+		target = document.getElementById('tj13-1ad');
+		doc2= document.getElementById("tj13-1"); 
+		doc0= document.getElementById("tj13-1b");  
+		doc1= document.getElementById("tj13-1c"); 
+		}
+	} else {
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'   || kind == '普' ){
+		nameText = document.getElementById('tj13-3a');
+		target = document.getElementById('tj13-3ad');
+		doc2= document.getElementById("tj13-3"); 
+		doc0= document.getElementById("tj13-3b");  
+		doc1= document.getElementById("tj13-3c"); 
+		} else {
+		nameText = document.getElementById('tj13-4a');
+		target = document.getElementById('tj13-4ad');
+		doc2= document.getElementById("tj13-4"); 
+		doc0= document.getElementById("tj13-4b");  
+		doc1= document.getElementById("tj13-4c"); 
+		}
+	}
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Asaka"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju13-12');
+		target = document.getElementById('tju13-12d');
+		doc2= document.getElementById("tju13-12e"); 
+		doc0= document.getElementById("tju13-12b");  
+		doc1= document.getElementById("tju13-12c"); 
+		} else {
+		nameText = document.getElementById('tj13-12');
+		target = document.getElementById('tj13-12d');
+		doc2= document.getElementById("tj13-12e"); 
+		doc0= document.getElementById("tj13-12b");  
+		doc1= document.getElementById("tj13-12c"); 
+		} 
+        break ;
+
+	case ( '"odpt.Station:Tobu.Tojo.Shiki"' ):
+		if ( unban.substr ( -1,1) == 'S' ||  unban.substr ( -1,1) == 'T' ||  unban.substr ( -1,1) == 'K'  || kind == '普' ){
+		nameText = document.getElementById('tju13-14');
+		target = document.getElementById('tju13-14d');
+		doc2= document.getElementById("tju13-14e"); 
+		doc0= document.getElementById("tju13-14b");  
+		doc1= document.getElementById("tju13-14c"); 
+		} else {
+		nameText = document.getElementById('tj13-14');
+		target = document.getElementById('tj13-14d');
+		doc2= document.getElementById("tj13-14e"); 
+		doc0= document.getElementById("tj13-14b");  
+		doc1= document.getElementById("tj13-14c"); 
+		} 
+        break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+default:
+	nameText = 0;
+        break ;
+}
+
+
+ info =   '　'+'&nbsp;' + des + '<br/>' +  unban + '<br/>' + '　'  ;
+
+	doc2.innerHTML= kind + "";
+	doc0.innerHTML= info.replace("―999","留置")+ " ";
+	doc1.innerHTML= delay;
+
+doc0.style.backgroundColor = '#ffffff'; //背景
+doc1.style.backgroundColor = '#ffffff'; //背景
+doc2.style.backgroundColor = '#ffffff'; //背景
+
+
+if ( nameText == 0 ){
+} else {
+
+nameText.value = "　";
+if ( dai == 1){
+doc0.style.backgroundColor = '#98fb98'; //背景
+}
+
+
+switch (kind) {
+case '各' :
+doc2.style.color = '#0000ff'; //文字
+break;
+case '急' :
+doc2.style.color = '#ff0000'; //文字
+break;
+case '快' :
+doc2.style.color = '#ff1493'; //文字
+break;
+case 'ラ' :
+doc2.style.color = '#ff8c00'; //文字
+break;
+case '準' :
+doc2.style.color = '#32cd32'; //文字
+break;
+case '川' :
+doc2.style.color = '#c71585'; //文字
+break;
+
+default:
+break ;
+}
+
+
+
+switch (cars) {
+	case '"6"' :
+	doc0.style.fontWeight = "normal";
+	doc0.style.textDecoration = "none";
+	break;
+	case '"8"' :
+	doc0.style.fontWeight = "normal";
+	doc0.style.textDecoration = "none";
+	break;
+	case '"10"' :
+	doc0.style.fontWeight = "bold";
+	doc0.style.textDecoration = "none";
+	break;
+}
+
+
+
+
+}
+
+}
+        if ( sessionStorage.getItem("wako") != '' && wakoshi == '' ){
+	nameText = document.getElementById('tj11-Ma');
+	target = document.getElementById('tj11-Mad');
+	doc0= document.getElementById("tj11-Mb");  
+	doc1= document.getElementById("tj11-Mc"); 
+	doc0.innerHTML= sessionStorage.getItem("wako");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	}
+	sessionStorage.setItem("wako", wakoshi);
+
+function sleepSetInterval(ms, callback, count) {
+  let i = 0;
+  const interval = setInterval(() => {
+    callback();
+    i++;
+    if (i === count) {
+      clearInterval(interval);
+    }
+  }, ms);
+}
+
+var YY = sessionStorage.getItem('Y0');
+window.scrollTo(0, YY );
+
+
+
+sleepSetInterval(2000, () =>{
+      sessionStorage.setItem('Y0',window.pageYOffset) ;
+}
+, 7)
+    }
+  }
+};
+
+
+
+
+request.send(null);
+
+
+///////////////////////////////ここから東上線
+
+var request2 = new XMLHttpRequest();
+request2.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:TrainInformation?odpt:railway=odpt.Railway:Tobu.Tojo&acl:consumerKey=l839g98l6b5ua7gxknup87hv4o4jrj3ru61qzr9yw25dg5x8k4ucfuu6p9nqugci", true);
+request2.responseType = "text";
+
+request2.onload = () => {
+  if (request2.readyState === request.DONE) {
+    if (request2.status === 200) {
+var data2 = JSON.parse(request2.responseText.replaceAll("odpt:","odpt"));
+data2 = JSON.stringify(data2[0].odpttrainInformationText).replace('{"ja":"','').replace('"}','');
+ 
+var unjo = null ;
+if ( data2 != '平常どおり運転しています。'){
+	unjo = data2;
+document.getElementById('joho').value = '◆東上線運行情報あり◆　　　　'
+document.getElementById('joho').style.color = '#ff0000';
+} 
+
+document.getElementById("joho").addEventListener("click", function () {
+if ( unjo == 'null' || unjo == null ){
+ alert( '東上線は平常通り運転しています。' )
+} else {
+ alert( unjo )
+}
+}, false);
+
+
+
+
+    }
+  }
+};
+
+
+
+
+request2.send(null);
+
+
+
+</script>
+
+
+  </body>
+</html>
